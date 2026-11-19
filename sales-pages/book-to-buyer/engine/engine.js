@@ -9,6 +9,21 @@
   var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   try {
+    /* ---------- 0. Full bleed: GoHighLevel pads rows by 10px a side on phones. Stretch the page back to the screen edges ---------- */
+    var bleed = function () {
+      root.style.marginLeft = "";
+      root.style.width = "";
+      var vw = document.documentElement.clientWidth;
+      var r = root.getBoundingClientRect();
+      var left = r.left + (window.pageXOffset || 0);
+      if (Math.abs(left) > 0.5 || Math.abs(r.width - vw) > 0.5) {
+        root.style.width = vw + "px";
+        root.style.marginLeft = (-left) + "px";
+      }
+    };
+    bleed();
+    window.addEventListener("resize", bleed);
+
     /* ---------- 1. Header: hidden at the top, slides in after 150px of scroll ---------- */
     var nav = $(".pnav");
     var toggle = nav ? $(".nav-toggle", nav) : null;

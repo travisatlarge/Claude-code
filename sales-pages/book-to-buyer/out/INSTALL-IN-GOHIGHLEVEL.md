@@ -1,8 +1,8 @@
-# Book To Buyer LIVE: sales page, build 1 (2026-11-19)
+# Book To Buyer LIVE: sales page, build 2 (2026-11-19)
 
 Status: DRAFT until you approve the open items below.
 
-Paste this file: `book-to-buyer-ghl-custom-code_b1.html` (115 KB, one block)
+Paste this file: `book-to-buyer-ghl-custom-code_b2.html` (115 KB, one block)
 Where: the Book To Buyer funnel, the step that serves booktobuyer.com
 
 ## Install
@@ -27,7 +27,7 @@ If the Custom Code element refuses the block, use `split_b1/`: file 1 in Setting
 
 ## What changed since the last build
 
-First build. It reproduces the live page as of 2026-11-19.
+Build 2 changes no words. One fix: on phones GoHighLevel pads the row 10px on each side, which leaves a white strip down both edges. The page now stretches itself back to the screen edges. Build 1 reproduced the live page as of 2026-11-19.
 
 ## How close it is to the live page
 

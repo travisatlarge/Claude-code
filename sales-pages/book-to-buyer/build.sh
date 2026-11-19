@@ -45,6 +45,11 @@ cp "$VARIANT/page-config.json" "$VARIANT/soldout.css" "$WORK/"
 cp -R "$VARIANT/out/." "$WORK/out/"
 # The plan buttons stay on the page (they open the message), so they must not open a new tab.
 sed -i 's/ target="_blank" rel="noopener"//g' "$WORK/sections/12-offer.html"
+# The hero says sold out: counter at 0 of 12, every seat dot filled, sold-out line under it.
+sed -i -f "$VARIANT/hero-sold-out.sed" "$WORK/sections/01-hero.html"
+grep -q "0 of 12 Seats Remaining" "$WORK/sections/01-hero.html" || { echo "STOP: the hero seat counter was not found. Check variants/sold-out/hero-sold-out.sed against sections/01-hero.html"; exit 1; }
+grep -q "Book To Buyer is now sold out" "$WORK/sections/01-hero.html" || { echo "STOP: the hero seat note was not found. Check variants/sold-out/hero-sold-out.sed against sections/01-hero.html"; exit 1; }
+if grep -q "<i></i>" "$WORK/sections/01-hero.html"; then echo "STOP: an open seat dot is still in the hero"; exit 1; fi
 cat "$VARIANT/soldout.js" >> "$STAGE/assets/engine.js"
 
 python3 "$STAGE/scripts/assemble_block.py" "$WORK" "${HOST_ARGS[@]}"

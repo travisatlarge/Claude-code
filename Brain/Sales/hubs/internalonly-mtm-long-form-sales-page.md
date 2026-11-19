@@ -31,3 +31,12 @@
 - ACTED: sold-out build 1 written to `sales-pages/book-to-buyer/variants/sold-out/out/`. Gates: 24 of 25 (same FAIL as the selling page). All 10 call-to-action buttons open the pop-up at desktop and 375px. Pop-up copy drafted at the owner's request, marked CHECK. Nothing pasted or published.
 - WAITING FOR APPROVAL: pop-up copy, the waitlist promise, the waitlist button target, whether the hero seat counter should change on the sold-out page.
 - MISSING: a waitlist form or page link (the button uses an email link until one is supplied).
+
+### 2026-11-19 · internalonly-mtm-long-form-sales-page · project `book-to-buyer`, build 2 of both pages
+
+- READ: the installed sold-out page at booktobuyer.com/book-to-buyer-is-sold-out (desktop and phone); the owner's request to show 0 of 12 seats in the hero.
+- DECIDED: sold-out hero wording is applied at build time from `variants/sold-out/hero-sold-out.sed`, so the selling page's hero stays the single source. The page stretches itself to the screen edges, because GoHighLevel pads the row 10px a side on phones.
+- CHECKED FIRST: installed build 1 works in GoHighLevel (header, pop-up on every button, no order page link in the block). Phone showed a 10px white strip each side.
+- ACTED: build 2 of both pages. Sold-out text diff: counter 11 to 0, line under it changed, nothing else. Selling page text diff: none. Gates unchanged: 24 of 25. Nothing pasted or published.
+- WAITING FOR APPROVAL: the hero line "All 12 seats are gone. Book To Buyer is now sold out." (CHECK), and the earlier open items.
+- MISSING: unchanged.

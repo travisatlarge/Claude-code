@@ -1,8 +1,9 @@
-# Book To Buyer LIVE: SOLD OUT page, build 1 (2026-11-19)
+# Book To Buyer LIVE: SOLD OUT page, build 2 (2026-11-19)
 
 Status: DRAFT until you approve the pop-up copy below.
 
-Paste this file: `book-to-buyer-sold-out-ghl-custom-code_b1.html` (125 KB, one block)
+Paste this file: `book-to-buyer-sold-out-ghl-custom-code_b2.html` (126 KB, one block)
+Installed at: https://booktobuyer.com/book-to-buyer-is-sold-out (build 1 is live there; paste build 2 over it)
 When: the day the event sells out. It replaces the selling page block.
 
 ## What it does
@@ -12,6 +13,15 @@ When: the day the event sells out. It replaces the selling page block.
 - No button reaches an order page. The two order page links are not in this file at all.
 - The eight header menu links and the FAQ work as before.
 - The pop-up closes with the X, the "Keep reading" link, a click outside it, or the Escape key.
+
+## What changed since build 1
+
+- Hero counter: "11 of 12 Seats Remaining" is now "0 of 12 Seats Remaining". All 12 seat dots are filled and no longer pulse.
+- Hero line under the counter: "Limited to 12 seats. When they are gone, they are gone." is now "All 12 seats are gone. Book To Buyer is now sold out." CHECK: this line was not word for word in the request.
+- Phones: GoHighLevel pads the row 10px on each side, which left a white strip down both edges of the installed page. The page now stretches itself back to the screen edges.
+- Checked on the installed page (build 1, desktop and phone): header slides in, every button opens the pop-up, both plan buttons point at the pop-up, no order page link in the block, no script errors.
+
+The sold-out hero wording lives in `variants/sold-out/hero-sold-out.sed`.
 
 ## Swap it in
 
@@ -42,7 +52,7 @@ Edit the words in `variants/sold-out/sections/97-soldout.html`, then run `./buil
 
 - CHECK, the waitlist promise: the pop-up says waitlisters hear first if a seat opens and first about the next dates. Keep it only if you will honor both.
 - CHECK, where the waitlist button goes: it opens an email to joy@healatscale.com with the subject "Book To Buyer LIVE waitlist". If you have a GoHighLevel form or waitlist page, send me the link and I will point the button there.
-- CHECK, the page itself still sells: the hero still reads "11 of 12 Seats Remaining" and "12 Seats Only", and the buttons still say RESERVE YOUR SEAT and ADD TO CART. You asked for the pop-up only, so I left the page copy alone. Recommended next step: change the hero counter to "12 of 12 Seats Taken".
+- CHECK, the buttons still say RESERVE YOUR SEAT and ADD TO CART, and the hero still shows "12 Seats Only". Left as is: only the counter and the line under it were changed.
 - FAIL, price math gate: same as the selling page ($16,500 plan total is not printed). Same owner decision.
 - Not checked: inside a real GoHighLevel page. Tested in the hostile test page (`test-harness_b1.html`).
 
