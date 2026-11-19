@@ -1,0 +1,34 @@
+{
+ "build": 1,
+ "paste_block": "out/book-to-buyer-sold-out-ghl-custom-code_b1.html",
+ "block_kb": 125.2,
+ "sections": [
+  "00-nav.html",
+  "01-hero.html",
+  "02-problem.html",
+  "03-audience.html",
+  "04-method.html",
+  "05-cases.html",
+  "06-deliverables.html",
+  "07-schedule.html",
+  "08-graduates.html",
+  "09-experience.html",
+  "10-bonuses.html",
+  "11-team.html",
+  "12-offer.html",
+  "13-note.html",
+  "14-faq.html",
+  "15-close.html",
+  "97-soldout.html",
+  "99-sticky.html"
+ ],
+ "slots_left": 0,
+ "tokens_left": [],
+ "media_without_hosted_url": [],
+ "media_files_missing": [],
+ "token_overrides": [],
+ "host_css_in_harness": true,
+ "open_items": [
+  "hero_video_embed_url is empty: the hero shows the poster and the play button does nothing"
+ ]
+}

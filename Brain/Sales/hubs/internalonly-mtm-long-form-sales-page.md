@@ -22,3 +22,12 @@
 - ACTED: build 1 written to `sales-pages/book-to-buyer/out/`. Gates: 24 of 25 passed, 1 FAIL (plan total not printed on the page, as on the live page), 3 WARN. Words: 0 differences against the live page. Nothing pasted, saved or published in GoHighLevel.
 - WAITING FOR APPROVAL: the open items in `sales-pages/book-to-buyer/out/INSTALL-IN-GOHIGHLEVEL.md` (price total line, repeated deliverable cards, six listed differences), then paste and publish.
 - MISSING: testimonial permission notes, an independent quality check, order page price confirmation, setup answers 2 and 4.
+
+### 2026-11-19 · internalonly-mtm-long-form-sales-page · project `book-to-buyer`, variant `sold-out`
+
+- READ: the project's sections, engine and build 1; the owner's request in conversation for a sold-out version.
+- DECIDED: a variant, not a second copy of the page. It is built from the same section files plus one extra section (the pop-up), its own settings, styles and script, with `./build.sh --sold-out`. Both plan buttons point at the pop-up, so the order page links are absent from the file. Page copy left unchanged.
+- CHECKED FIRST: selling page build 1 is byte-identical after the build script change. No order page link in the sold-out block.
+- ACTED: sold-out build 1 written to `sales-pages/book-to-buyer/variants/sold-out/out/`. Gates: 24 of 25 (same FAIL as the selling page). All 10 call-to-action buttons open the pop-up at desktop and 375px. Pop-up copy drafted at the owner's request, marked CHECK. Nothing pasted or published.
+- WAITING FOR APPROVAL: pop-up copy, the waitlist promise, the waitlist button target, whether the hero seat counter should change on the sold-out page.
+- MISSING: a waitlist form or page link (the button uses an email link until one is supplied).

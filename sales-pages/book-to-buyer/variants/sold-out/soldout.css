@@ -1,0 +1,53 @@
+/* Sold-out variant: the modal every call-to-action button opens. Added to the page through extra_css. */
+.lfsp-page.lfsp-portal{position:static;width:auto;height:0;background:none}
+.lfsp-page .soldout{display:none;position:fixed;inset:0;z-index:100000;align-items:flex-start;justify-content:center;padding:24px 16px;overflow-y:auto;-webkit-overflow-scrolling:touch}
+.lfsp-page .soldout.open{display:flex}
+.lfsp-page:not(.lfsp-portal) .soldout:target{display:flex}
+.lfsp-page .soldout-veil{position:fixed;inset:0;background:rgba(6,13,24,.82);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);cursor:default}
+.lfsp-page .soldout-box{position:relative;z-index:1;width:100%;max-width:560px;margin:auto;overflow:hidden;background:var(--navy);border:1px solid rgba(31,159,230,.55);border-radius:8px;box-shadow:0 30px 80px rgba(0,0,0,.6),0 0 40px rgba(31,159,230,.18);animation:lfsp-pop .35s ease both}
+.lfsp-page .soldout-x{position:absolute;top:12px;right:12px;z-index:3;display:flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:50%;background:rgba(6,13,24,.7);border:1px solid rgba(255,255,255,.25);color:var(--white);transition:background-color .2s ease,border-color .2s ease}
+.lfsp-page .soldout-x:hover{background:var(--orange);border-color:var(--orange)}
+.lfsp-page .soldout-x svg{width:18px;height:18px}
+.lfsp-page .soldout-art{position:relative;height:190px;overflow:hidden;background:var(--navy)}
+.lfsp-page .soldout-art img{display:block;width:100%;height:100%;object-fit:cover;object-position:center 46%}
+.lfsp-page .soldout-art::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(11,33,63,1) 0%,rgba(11,33,63,.55) 45%,rgba(11,33,63,.25) 100%)}
+.lfsp-page .soldout-art figcaption{position:absolute;inset:0;z-index:2;display:flex;align-items:center;justify-content:center}
+.lfsp-page .soldout-stamp{display:inline-block;padding:10px 26px;border:3px solid var(--orange);border-radius:6px;background:rgba(11,33,63,.55);-webkit-backdrop-filter:blur(4px);backdrop-filter:blur(4px);transform:rotate(-6deg);font-family:var(--f-display);font-size:30px;font-weight:800;line-height:1;letter-spacing:6px;text-transform:uppercase;color:var(--orange);box-shadow:0 10px 30px rgba(0,0,0,.35)}
+.lfsp-page .soldout-body{padding:6px 40px 36px;text-align:center}
+.lfsp-page .soldout-kicker{font-family:var(--f-mono);font-size:11px;font-weight:600;line-height:1.5;letter-spacing:1.5px;text-transform:uppercase;color:var(--blue)}
+.lfsp-page .soldout-body h2{margin-top:12px;font-family:var(--f-serif);font-size:36px;font-weight:600;line-height:1.1;color:var(--white);text-wrap:balance}
+.lfsp-page .soldout-seats{display:inline-flex;align-items:center;gap:14px;margin-top:20px;padding:10px 16px;background:rgba(255,255,255,.05);border:1px solid rgba(31,159,230,.4);border-radius:4px}
+.lfsp-page .soldout-dots{display:flex;align-items:center;gap:6px}
+.lfsp-page .soldout-dots i{display:block;width:8px;height:8px;border-radius:999px;background:var(--blue)}
+.lfsp-page .soldout-count{font-size:12px;font-weight:600;line-height:15px;letter-spacing:1.5px;text-transform:uppercase;color:var(--white)}
+.lfsp-page .soldout-body p{margin-top:14px;font-size:16px;line-height:1.6;color:var(--on-navy)}
+.lfsp-page .soldout-body p.soldout-kicker{margin-top:0;font-size:11px;line-height:1.5;color:var(--blue)}
+.lfsp-page .soldout-body p.soldout-lead{margin-top:20px;font-family:var(--f-grotesk);font-size:20px;font-weight:700;line-height:1.35;color:var(--white)}
+.lfsp-page .soldout-act{display:flex;flex-direction:column;align-items:center;gap:14px;margin-top:26px}
+.lfsp-page .btn-solid{background:var(--orange);color:var(--white);box-shadow:0 12px 32px -8px rgba(248,96,17,.35)}
+.lfsp-page .btn-solid:hover{transform:translateY(-3px);box-shadow:0 24px 48px -12px rgba(248,96,17,.45),0 8px 20px rgba(248,96,17,.18)}
+.lfsp-page .btn-solid:focus-visible,.lfsp-page .soldout-x:focus-visible,.lfsp-page .soldout-skip:focus-visible{outline:2px solid var(--white);outline-offset:3px}
+.lfsp-page .soldout-skip{font-family:var(--f-dm);font-size:11px;line-height:1.4;letter-spacing:2px;text-transform:uppercase;color:rgba(253,252,251,.65);border-bottom:1px solid rgba(253,252,251,.3);padding-bottom:2px}
+.lfsp-page .soldout-skip:hover{color:var(--white);border-color:var(--white)}
+.lfsp-page .soldout-body p.soldout-fine{margin-top:22px;font-size:13px;line-height:1.5;color:rgba(255,255,255,.55)}
+@keyframes lfsp-pop{from{opacity:0;transform:translateY(18px) scale(.97)}to{opacity:1;transform:none}}
+@media (max-width:767px){
+  .lfsp-page .soldout{padding:12px}
+  .lfsp-page .soldout-art{height:118px}
+  .lfsp-page .soldout-stamp{font-size:22px;letter-spacing:5px;padding:8px 18px}
+  .lfsp-page .soldout-body{padding:2px 20px 22px}
+  .lfsp-page .soldout-body p.soldout-kicker{font-size:10px;letter-spacing:1px}
+  .lfsp-page .soldout-body h2{margin-top:8px;font-size:30px}
+  .lfsp-page .soldout-seats{gap:8px;margin-top:14px;padding:9px 10px}
+  .lfsp-page .soldout-dots{gap:4px}
+  .lfsp-page .soldout-dots i{width:6px;height:6px}
+  .lfsp-page .soldout-count{font-size:10px;letter-spacing:1px;white-space:nowrap}
+  .lfsp-page .soldout-body p{margin-top:10px;font-size:15px;line-height:1.5}
+  .lfsp-page .soldout-body p.soldout-lead{margin-top:14px;font-size:17px}
+  .lfsp-page .soldout-act{gap:12px;margin-top:18px}
+  .lfsp-page .soldout .btn-solid{min-width:0;width:100%;padding:17px 16px}
+  .lfsp-page .soldout-body p.soldout-fine{margin-top:14px;font-size:12px}
+}
+@media (prefers-reduced-motion:reduce){
+  .lfsp-page .soldout-box{animation:none}
+}

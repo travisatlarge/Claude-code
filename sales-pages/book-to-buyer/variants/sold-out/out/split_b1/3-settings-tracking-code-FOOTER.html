@@ -1,0 +1,190 @@
+<script>
+// Book To Buyer LIVE sales page: interaction layer. Root: #lfsp-page.
+// Progressive enhancement: the page reads fully with scripts off. The .motion flag is set on the root by a
+// one-line script as the root opens; every hidden-until-revealed state in engine.css is scoped to .motion.
+(function () {
+  var root = document.getElementById("lfsp-page");
+  if (!root) return;
+  var $ = function (s, c) { return (c || root).querySelector(s); };
+  var $$ = function (s, c) { return Array.prototype.slice.call((c || root).querySelectorAll(s)); };
+  var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  try {
+    /* ---------- 1. Header: hidden at the top, slides in after 150px of scroll ---------- */
+    var nav = $(".pnav");
+    var toggle = nav ? $(".nav-toggle", nav) : null;
+    var closeMenu = function () {
+      if (!nav) return;
+      nav.classList.remove("open");
+      if (toggle) toggle.setAttribute("aria-expanded", "false");
+    };
+    if (nav) {
+      var onScroll = function () {
+        var show = (window.pageYOffset || document.documentElement.scrollTop || 0) > 150;
+        nav.classList.toggle("show", show);
+        if (!show) closeMenu();
+      };
+      if (toggle) {
+        toggle.addEventListener("click", function () {
+          var open = nav.classList.toggle("open");
+          toggle.setAttribute("aria-expanded", open ? "true" : "false");
+        });
+      }
+      window.addEventListener("scroll", onScroll, { passive: true });
+      onScroll();
+    }
+
+    /* ---------- 2. Anchor links: smooth scroll. Every #order link lands on the pricing box ---------- */
+    root.addEventListener("click", function (e) {
+      var a = e.target && e.target.closest ? e.target.closest('a[href^="#"]') : null;
+      if (!a) return;
+      var id = a.getAttribute("href").slice(1);
+      var target = id ? document.getElementById(id) : null;
+      if (!target) return;
+      e.preventDefault();
+      closeMenu();
+      var y = target.getBoundingClientRect().top + (window.pageYOffset || 0);
+      window.scrollTo({ top: y, behavior: reduce ? "auto" : "smooth" });
+      if (window.history && history.replaceState) history.replaceState(null, "", "#" + id);
+    });
+
+    /* ---------- 3. Scroll reveals: the same list engine.css hides under .motion ---------- */
+    var REVEAL = ".hero h1,.deck,.seat-note,.eyebrow,.ptitle,.tx,.punch,.pullq,.bigq,.serif-note,.layer-sub,.layer h3,.layer p,.fitcard,.notfit," +
+      ".pill,.case-quote blockquote,.byline,.tq blockquote,.deliv h3,.deliv p,.grad blockquote,.logi p,.bonus p,.plan-price,.plan-label," +
+      ".plan-band,.after-plans,.sig-line,.path p,.where";
+    var items = $$("main " + REVEAL.split(",").join(",main "));
+    if (!("IntersectionObserver" in window) || reduce) {
+      items.forEach(function (el) { el.classList.add("in"); });
+    } else {
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (en) {
+          if (!en.isIntersecting) return;
+          en.target.classList.add("in");
+          io.unobserve(en.target);
+        });
+      }, { rootMargin: "0px 0px -4% 0px", threshold: 0 });
+      items.forEach(function (el) { io.observe(el); });
+    }
+
+    /* ---------- 4. Stat counters: count from data-start to data-end over two seconds ---------- */
+    var counters = $$("[data-end]");
+    var runCounter = function (el) {
+      var start = parseInt(el.getAttribute("data-start"), 10) || 0;
+      var end = parseInt(el.getAttribute("data-end"), 10) || 0;
+      var suffix = el.getAttribute("data-suffix") || "";
+      var t0 = null;
+      var step = function (t) {
+        if (!t0) t0 = t;
+        var p = Math.min((t - t0) / 2000, 1);
+        el.textContent = Math.floor(start + (end - start) * p) + suffix;
+        if (p < 1) requestAnimationFrame(step); else el.textContent = end + suffix;
+      };
+      requestAnimationFrame(step);
+    };
+    if (counters.length && "IntersectionObserver" in window && !reduce) {
+      var cio = new IntersectionObserver(function (entries) {
+        entries.forEach(function (en) {
+          if (!en.isIntersecting) return;
+          runCounter(en.target);
+          cio.unobserve(en.target);
+        });
+      }, { threshold: 0.4 });
+      counters.forEach(function (el) { cio.observe(el); });
+    }
+
+    /* ---------- 5. FAQ: answers open and close with a height and fade animation ---------- */
+    $$(".faq-card details").forEach(function (d) {
+      var summary = $("summary", d), panel = $(".a", d);
+      if (!summary || !panel || !panel.animate || reduce) return;
+      var busy = null;
+      summary.addEventListener("click", function (e) {
+        e.preventDefault();
+        if (busy) { busy.cancel(); busy = null; }
+        var opening = !d.open;
+        if (opening) d.open = true;
+        var h = panel.scrollHeight;
+        busy = panel.animate(
+          opening ? [{ height: "0px", opacity: 0 }, { height: h + "px", opacity: 1 }]
+                  : [{ height: h + "px", opacity: 1 }, { height: "0px", opacity: 0 }],
+          { duration: 260, easing: "ease" });
+        busy.onfinish = function () { if (!opening) d.open = false; busy = null; };
+      });
+    });
+  } catch (err) {
+    // Anything unexpected: show everything instead of leaving content hidden.
+    root.classList.remove("motion");
+    if (window.console && console.error) console.error("lfsp-page script:", err);
+  }
+})();
+
+// Sold-out variant: every call-to-action button opens the sold-out message instead of scrolling or checking out.
+// Added after the page script at build time. Does nothing when the page has no #sold-out element.
+(function () {
+  var root = document.getElementById("lfsp-page");
+  var modal = document.getElementById("sold-out");
+  if (!root || !modal) return;
+
+  // Move the message to the end of <body> so it always covers the whole screen, whatever wraps the page block.
+  var portal = document.createElement("div");
+  portal.className = "lfsp-page lfsp-portal";
+  document.body.appendChild(portal);
+  portal.appendChild(modal);
+
+  var lastFocus = null;
+  var prevOverflow = "";
+  var focusables = function () {
+    return Array.prototype.slice.call(modal.querySelectorAll("a[href], button")).filter(function (el) {
+      return el.offsetParent !== null && !el.classList.contains("soldout-veil");
+    });
+  };
+  var isOpen = function () { return modal.classList.contains("open"); };
+
+  var open = function (from) {
+    if (isOpen()) return;
+    lastFocus = from || document.activeElement;
+    prevOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    modal.classList.add("open");
+    modal.scrollTop = 0;
+    var first = modal.querySelector(".btn-solid") || focusables()[0];
+    if (first && first.focus) first.focus({ preventScroll: true });
+  };
+  var close = function () {
+    if (!isOpen()) return;
+    modal.classList.remove("open");
+    document.body.style.overflow = prevOverflow;
+    if (lastFocus && lastFocus.focus) lastFocus.focus({ preventScroll: true });
+  };
+
+  // Capture phase: runs before the page's own anchor scrolling, and before a plan button can leave the page.
+  root.addEventListener("click", function (e) {
+    var hit = e.target && e.target.closest ? e.target.closest('.btn-cta, a[href="#sold-out"]') : null;
+    if (!hit) return;
+    e.preventDefault();
+    e.stopPropagation();
+    open(hit);
+  }, true);
+
+  modal.addEventListener("click", function (e) {
+    var c = e.target && e.target.closest ? e.target.closest("[data-close]") : null;
+    if (!c) return;
+    e.preventDefault();
+    close();
+  });
+
+  document.addEventListener("keydown", function (e) {
+    if (!isOpen()) return;
+    if (e.key === "Escape" || e.key === "Esc") { e.preventDefault(); close(); return; }
+    if (e.key !== "Tab") return;
+    var f = focusables();
+    if (!f.length) return;
+    var first = f[0], last = f[f.length - 1];
+    if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+    else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+    else if (!modal.contains(document.activeElement)) { e.preventDefault(); first.focus(); }
+  });
+
+  if (window.location.hash === "#sold-out") open(null);
+})();
+
+</script>
