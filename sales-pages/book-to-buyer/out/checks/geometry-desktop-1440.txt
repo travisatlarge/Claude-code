@@ -1,0 +1,56 @@
+SECTIONS (live top/h vs mine top/h, d=mine-live)
+  s00 live    -19   771 | mine      0   752 | dtop  +19 dh  -19
+  s01 live    752  1516 | mine    752  1516 | dtop   +0 dh   +0
+  s02 live   2269  1743 | mine   2269  1743 | dtop   +0 dh   +0
+  s03 live   4011  2652 | mine   4012  2652 | dtop   +1 dh   +0
+  s04 live   6663  4640 | mine   6663  4640 | dtop   +0 dh   +0
+  s05 live  11304  1640 | mine  11304  1640 | dtop   +0 dh   +0
+  s06 live  12943  4291 | mine  12943  4291 | dtop   +0 dh   +0
+  s07 live  17234  2314 | mine  17234  2314 | dtop   +0 dh   +0
+  s08 live  19548  1876 | mine  19548  1876 | dtop   +0 dh   +0
+  s09 live  21424   929 | mine  21423   929 | dtop   -1 dh   +0
+  s10 live  22352   726 | mine  22352   726 | dtop   +0 dh   +0
+  s11 live  23078   967 | mine  23078   967 | dtop   +0 dh   +0
+  s12 live  24045  1123 | mine  24045  1123 | dtop   +0 dh   +0
+  s13 live  25168   860 | mine  25168   860 | dtop   +0 dh   +0
+  s14 live  26028   990 | mine  26028   990 | dtop   +0 dh   +0
+s02 d(x+0 y+0 w+0 h+0) live[323,3813 795x69] TYPE lh 33.8px>35px :: Every graduate who followed the process finished the
+s03 d(x+0 y+0 w+0 h+0) live[400,4641 101x47] TYPE lh 27.9px>29px :: Your book as a positioning tool
+s03 d(x+0 y+0 w+0 h+0) live[652,4641 136x47] TYPE lh 27.9px>29px :: Your book as a client acquisition engine
+s03 d(x+0 y+0 w+0 h+0) live[912,4641 155x47] TYPE lh 27.9px>29px :: Your book as a platform builder
+s03 d(x+0 y+0 w+0 h+0) live[321,4825 69x14] TYPE lh 14.3px>15px :: LAYER 01
+s03 d(x+0 y+0 w+0 h+0) live[321,4928 525x28] TYPE lh 27.9px>29px :: Your book is not a memoir. It is a positioning tool.
+s03 d(x+0 y+0 w+0 h+0) live[321,5355 69x14] TYPE lh 14.3px>15px :: LAYER 02
+s03 d(x+0 y+0 w+0 h+0) live[321,5458 797x28] TYPE lh 27.9px>29px :: Amazon is the worst place to sell your expert book. 
+s03 d(x+0 y+0 w+0 h+0) live[321,5885 69x14] TYPE lh 14.3px>15px :: LAYER 03
+s03 d(x+0 y-1 w+0 h+0) live[321,5989 754x57] TYPE lh 27.9px>29px :: This is the layer nobody else builds. And it is the 
+s04 d(x-1 y+0 w+0 h+0) live[479,7916 673x79]  :: They literally pulled the book out of me. By day fiv
+s04 d(x+1 y+0 w+0 h+0) live[302,8514 149x15] TYPE lh 15.6px>17px :: #1 amazon bestseller
+s04 d(x+1 y+0 w+0 h+0) live[521,8514 144x15] TYPE lh 15.6px>17px :: filled patient roster
+s04 d(x+1 y+0 w+0 h+0) live[740,8514 249x15] TYPE lh 15.6px>17px :: from idea to #1 bestseller in 58 days
+s04 d(x-1 y-1 w+13 h+0) live[479,9620 669x79]  :: When Eric decided to finally write his own book, he 
+s04 d(x-1 y-1 w+0 h+0) live[479,9735 485x21]  :: Five days later, he walked out with a finished manus
+s04 d(x-1 y+0 w+0 h+0) live[304,9905 176x15] TYPE lh 15.6px>17px :: #1 in 3 amazon categories
+s04 d(x-1 y+0 w+0 h+0) live[551,9905 174x15] TYPE lh 15.6px>17px :: foreword by brian tracy
+s04 d(x-2 y+0 w+0 h+0) live[801,9905 231x15] TYPE lh 15.6px>17px :: from idea to bestseller in 31 days
+s04 d(x+0 y+0 w+0 h+0) live[297,10049 839x111]  :: I walked into the workshop with an idea. I walked ou
+s11 d(x-130 y+0 w+0 h+0) live[515,23473 198x14] TYPE lh 14.3px>15px :: Best Value: Save $1,500
+s11 d(x+0 y+0 w+0 h+0) live[377,23514 218x71]  :: $15,000
+s12 d(x+0 y+0 w+0 h+0) live[321,25063 155x14] TYPE lh 14.3px>15px :: CEO, Heal At Scale
+s13 d(x+15 y+15 w-31 h+0) live[321,25463 788x75]  :: No. The Prep Session and Day 1 are specifically desi
+s13 d(x+0 y+0 w+0 h+0) live[336,25478 458x26]  :: What if I have already started writing my book?
+s13 d(x+15 y+15 w+0 h+0) live[321,25524 758x75]  :: Bring what you have. Most experts who arrive with dr
+s13 d(x+0 y+0 w+0 h+0) live[336,25539 297x26]  :: What if I am not a good writer?
+s13 d(x+15 y+15 w-11 h+0) live[321,25585 777x102]  :: Our AI-powered process is built for non-writers. You
+s13 d(x+0 y+0 w+0 h+0) live[336,25600 408x26]  :: Can I really write an entire book in 5 days?
+s13 d(x+15 y+15 w-19 h+0) live[321,25646 788x102]  :: Yes. Every B2B graduate who followed the process com
+s13 d(x+0 y+0 w+0 h+0) live[336,25661 511x26]  :: What if I do not have a big audience or email list y
+s13 d(x+15 y+15 w-28 h+0) live[321,25707 797x102]  :: Most attendees do not. Book To Buyer is designed to 
+s13 d(x+0 y+0 w+0 h+0) live[336,25722 450x26]  :: Is travel, hotel, and food included in the price?
+s13 d(x+15 y+15 w-37 h+27) live[321,25768 798x75]  :: Catered lunches, snacks, refreshments, the Welcome R
+s13 d(x+0 y+0 w+0 h+0) live[336,25783 482x26]  :: What if something comes up and I cannot attend?
+s13 d(x+15 y+15 w-23 h+0) live[321,25829 777x102]  :: Once you enroll, your seat is locked and the team be
+s13 d(x+0 y+0 w+0 h+0) live[336,25844 358x26]  :: What if I am not comfortable with AI?
+s13 d(x+15 y+15 w-25 h+0) live[321,25890 793x75]  :: You do not need to be. The AI process is woven into 
+s13 d(x+0 y+0 w+0 h+0) live[336,25905 297x26]  :: What if I have more questions?
+s13 d(x+15 y+15 w-27 h+0) live[321,25951 783x48]  :: Email Joy directly at joy@healatscale.com. She reads

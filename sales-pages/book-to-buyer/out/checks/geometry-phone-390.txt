@@ -1,0 +1,17 @@
+SECTIONS (live top/h vs mine top/h, d=mine-live)
+  s00 live      0   911 | mine      0   911 | dtop   +0 dh   +0
+  s01 live    911  1782 | mine    911  1781 | dtop   +0 dh   -1
+  s02 live   2693  2390 | mine   2692  2389 | dtop   -1 dh   -1
+  s03 live   5082  3674 | mine   5080  3672 | dtop   -2 dh   -2
+  s04 live   8756  8079 | mine   8752  8073 | dtop   -4 dh   -6
+  s05 live  16835  3391 | mine  16825  3390 | dtop  -10 dh   -1
+  s06 live  20226  5956 | mine  20216  5955 | dtop  -10 dh   -1
+  s07 live  26182  3569 | mine  26170  3568 | dtop  -12 dh   -1
+  s08 live  29751  3231 | mine  29739  3230 | dtop  -12 dh   -1
+  s09 live  32982  1062 | mine  32969  1062 | dtop  -13 dh   +0
+  s10 live  34044  1011 | mine  34031  1010 | dtop  -13 dh   -1
+  s11 live  35055  1533 | mine  35041  1530 | dtop  -14 dh   -3
+  s12 live  36588  1275 | mine  36570  1273 | dtop  -18 dh   -2
+  s13 live  37863   997 | mine  37844   996 | dtop  -19 dh   -1
+  s14 live  38860  1227 | mine  38840  1227 | dtop  -20 dh   +0
+s03 d(x+0 y-2 w+0 h+0) live[70,5132 250x18]  :: THE BOOK TO BUYER METHOD

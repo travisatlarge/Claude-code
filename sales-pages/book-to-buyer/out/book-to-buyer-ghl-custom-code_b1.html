@@ -1,0 +1,1087 @@
+<!-- Book To Buyer LIVE sales page: GoHighLevel Custom Code block. Words: sections/. Code: the long-form sales page engine. Paste into one full-width Custom Code element. -->
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,600&family=DM+Sans:ital,wght@0,400;1,400&family=Inter:ital,wght@0,400;0,600;0,700;0,800;1,400;1,700&family=JetBrains+Mono:wght@400;600;700;800&family=Montserrat:wght@700;800&family=Source+Serif+4:ital,wght@1,400&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+<style>
+/* Book To Buyer LIVE sales page: styles. Root: .lfsp-page. The design tokens are the first rule.
+   This file reproduces the look of the live booktobuyer.com page (November 2026) inside one GoHighLevel
+   Custom Code block. Layout numbers mirror the live page's measured boxes. Phone rules start at 767px. */
+.lfsp-page{
+  --navy:#0B213F;
+  --blue:#1F9FE6;
+  --orange:#F86011;
+  --teal:#0ABAB5;
+  --ink:#2A2A2A;
+  --snow:#F5F7F8;
+  --paper:#FDFCFB;
+  --white:#FFFFFF;
+  --line:#E8E2D6;
+  --line-cool:#CBD5E0;
+  --on-navy:rgba(255,255,255,.8);
+  --glass:rgba(255,255,255,.05);
+  --f-display:"Montserrat",sans-serif;
+  --f-serif:"Cormorant Garamond",serif;
+  --f-sans:"Inter",sans-serif;
+  --f-mono:"JetBrains Mono",monospace;
+  --f-grotesk:"Space Grotesk",sans-serif;
+  --f-quote:"Source Serif 4",serif;
+  --f-dm:"DM Sans",sans-serif;
+  position:relative;width:100%;margin:0;padding:0;background:var(--white);color:#000;
+  font-family:var(--f-sans);font-size:16px;font-weight:400;line-height:1.5;text-align:left;letter-spacing:0;text-transform:none;
+}
+.lfsp-page *,.lfsp-page *::before,.lfsp-page *::after{box-sizing:border-box}
+.lfsp-page :where(h1,h2,h3,h4,p,ul,ol,li,figure,blockquote,figcaption,summary,details){margin:0;padding:0;font:inherit;color:inherit;letter-spacing:inherit;text-transform:inherit;text-align:inherit;border:0;background:none}
+.lfsp-page :where(ul,ol){list-style:none}
+.lfsp-page :where(a){color:inherit;text-decoration:none}
+.lfsp-page :where(img,svg){display:inline-block;max-width:100%;vertical-align:middle;border:0}
+.lfsp-page :where(strong,b){font-weight:700}
+.lfsp-page :where(em,i){font-style:italic}
+.lfsp-page main{display:block;overflow-x:clip}
+
+/* ---------- layout primitives (they mirror the live page's section > row > column boxes) ---------- */
+.lfsp-page .sec{position:relative;width:100%}
+.lfsp-page .wrap{position:relative;z-index:2;display:flex;flex-direction:column;width:100%;max-width:1170px;margin:0 auto}
+.lfsp-page .rw{position:relative;display:flex;flex-direction:column;width:100%;margin-left:auto;margin-right:auto;padding:20px 10px}
+.lfsp-page .rw.cols{flex-direction:row;padding:10px 5px}
+.lfsp-page .cl{position:relative;display:flex;flex-direction:column;flex:1 1 0;min-width:0;padding:10px 5px}
+.lfsp-page .w45{width:45%}
+.lfsp-page .w70{width:70%}
+.lfsp-page .w80{width:80%}
+.lfsp-page .w85{width:85%}
+.lfsp-page .w90{width:90%}
+.lfsp-page .bg-navy{background:var(--navy)}
+.lfsp-page .bg-snow{background:var(--snow)}
+.lfsp-page .bg-paper{background:var(--paper)}
+.lfsp-page .bg-white{background:var(--white)}
+.lfsp-page .rule-glow::after{content:"";position:absolute;left:0;bottom:0;width:100%;height:1px;background:linear-gradient(to right,transparent,#1f9fe6 30%,#f86011 70%,transparent)}
+
+/* ---------- type ---------- */
+.lfsp-page .eyebrow{padding:10px 0;font-family:var(--f-mono);font-size:16px;font-weight:400;line-height:20.8px;letter-spacing:2px;text-transform:uppercase;color:var(--blue)}
+.lfsp-page .eyebrow.xs{font-size:11px;font-weight:600;line-height:15px}
+.lfsp-page .ptitle{margin-top:20px;font-family:var(--f-serif);font-size:50px;font-weight:600;line-height:60px;color:var(--navy)}
+.lfsp-page .ptitle.snug{line-height:50px}
+.lfsp-page .ptitle.md{font-size:40px;font-weight:400;line-height:48px}
+.lfsp-page .ptitle em{color:var(--orange)}
+.lfsp-page .on-dark{color:var(--white)}
+.lfsp-page .tx{margin-top:10px;padding:10px 0;font-family:var(--f-sans);font-size:18px;font-weight:400;line-height:28.8px;color:#000}
+.lfsp-page .tx.fx{line-height:27.9px}
+.lfsp-page .tx.ink{color:var(--ink)}
+.lfsp-page .tx.soft{color:var(--on-navy)}
+.lfsp-page .tx.snow{color:var(--snow)}
+.lfsp-page .tx.lg{font-size:24px;line-height:38.4px}
+.lfsp-page .tx.sm{font-size:14px}
+.lfsp-page .tx.plead{margin-top:20px;font-size:20px;line-height:32px}
+.lfsp-page .tx p + p{margin-top:1lh}
+.lfsp-page .pullq{margin-top:10px;padding:10px 0 10px 20px;border-left:2px solid var(--blue);font-family:var(--f-quote);font-size:22px;font-style:italic;font-weight:400;line-height:35.2px;color:var(--ink)}
+.lfsp-page .punch{margin-top:10px;padding:10px 0;font-family:var(--f-grotesk);font-size:28.37px;font-weight:700;line-height:45.39px;color:var(--ink)}
+.lfsp-page .punch.md{font-size:26px;line-height:35px;margin-top:0}
+.lfsp-page .punch.sm{font-size:20px;line-height:27.9px;margin-top:20px}
+.lfsp-page .punch .hi{color:var(--blue)}
+.lfsp-page .bigq{margin-top:10px;padding:10px 0;font-family:var(--f-quote);font-size:24.5px;font-style:italic;font-weight:400;line-height:39.2px;color:var(--blue);text-align:center}
+.lfsp-page .serif-note{margin-top:10px;padding:10px 0;font-family:var(--f-quote);font-size:18px;font-style:italic;font-weight:400;line-height:27.9px;color:var(--blue)}
+
+/* ---------- buttons ---------- */
+.lfsp-page .cta-block{margin-top:20px;text-align:center;line-height:0}
+.lfsp-page .pbtn{position:relative;display:inline-flex;align-items:center;justify-content:center;overflow:hidden;cursor:pointer;border:0;border-radius:5.5px;padding:20px 40px;font-family:var(--f-display);font-size:15px;font-weight:700;line-height:19px;letter-spacing:2px;text-transform:uppercase;text-align:center;text-decoration:none;white-space:nowrap;transition:all .3s ease;will-change:transform}
+.lfsp-page .btn-cta{background:var(--orange);color:var(--white);box-shadow:0 12px 32px -8px rgba(248,96,17,.35)}
+.lfsp-page .btn-cta:hover{transform:translateY(-3px);box-shadow:0 24px 48px -12px rgba(248,96,17,.45),0 8px 20px rgba(248,96,17,.18)}
+.lfsp-page .btn-cta:focus-visible{outline:2px solid var(--white);outline-offset:3px}
+.lfsp-page .btn-cta::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,transparent 10%,rgba(255,255,255,.08) 30%,rgba(255,255,255,.12) 50%,rgba(255,255,255,.08) 70%,transparent 90%);transform:translateX(-100%) skewX(-20deg);pointer-events:none}
+.lfsp-page .btn-cta:hover::before{animation:lfsp-shimmer 1.4s ease-out}
+.lfsp-page .ktext{position:relative;display:inline-block}
+@keyframes lfsp-shimmer{from{transform:translateX(-100%) skewX(-20deg)}to{transform:translateX(100%) skewX(-20deg)}}
+
+/* ---------- header (hidden at the top of the page, slides in after 150px of scroll) ---------- */
+.lfsp-page .pnav{position:sticky;top:0;z-index:9999;height:0}
+.lfsp-page .pnav-bar{position:absolute;left:0;right:0;top:0;padding:8px 0;background:rgba(6,13,24,.92);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);border-bottom:1px solid #35414C;box-shadow:0 10px 30px rgba(0,0,0,.15);transform:translateY(-100%);opacity:0;visibility:hidden;transition:transform .4s ease,opacity .4s ease,visibility 0s linear .4s}
+.lfsp-page .pnav.show .pnav-bar{transform:translateY(0);opacity:1;visibility:visible;transition:transform .4s ease,opacity .4s ease,visibility 0s}
+.lfsp-page .pnav-in{display:flex;align-items:center;max-width:1170px;height:65px;margin:0 auto;padding:0 10px 0 20px}
+.lfsp-page .brandmark{display:flex;align-items:center;flex:0 0 222px;height:20px}
+.lfsp-page .brandmark img{width:101px;height:20px}
+.lfsp-page .nav-links{display:flex;align-items:center;flex:1 1 auto}
+.lfsp-page .nav-links a{display:block;margin-left:12px;padding:8px 6px;border-radius:2px;font-family:var(--f-dm);font-size:10px;font-weight:400;line-height:13px;letter-spacing:2px;text-transform:uppercase;white-space:nowrap;color:rgba(253,252,251,.65)}
+.lfsp-page .nav-cta{flex:0 0 auto;padding:10px 20px;font-size:10px}
+.lfsp-page .nav-toggle{display:none}
+
+/* ---------- hero ---------- */
+.lfsp-page .hero{overflow:hidden;background:var(--navy)}
+.lfsp-page .hero-bg{position:absolute;left:0;top:-19px;z-index:1;width:100%;max-width:none;height:calc(100% + 19px);object-fit:cover;object-position:center;opacity:.3}
+.lfsp-page .hero h1{margin-top:40px;padding-bottom:40px;font-family:var(--f-display);font-size:53px;font-weight:800;line-height:53px;color:var(--snow);text-align:center}
+.lfsp-page .hero .deck{margin:10px 0 20px;padding:10px 0;font-size:20px;line-height:32px;color:var(--snow);text-align:center}
+.lfsp-page .facts{display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:12px}
+.lfsp-page .fact{display:flex;align-items:center;gap:10px;min-height:44px;padding:12px 18px;background:rgba(11,33,63,.5);border:1px solid rgba(31,159,230,.4);border-radius:4px;-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);font-size:12px;font-weight:600;line-height:15px;letter-spacing:1.5px;text-transform:uppercase;color:var(--white)}
+.lfsp-page .fact svg{flex-shrink:0;width:16px;height:16px;color:var(--blue)}
+.lfsp-page .hero-act{margin:0 auto;padding:10px 5px 10px 10px}
+.lfsp-page .hero-act > div{padding:10px 5px}
+.lfsp-page .seats{display:inline-flex;align-items:center;gap:16px;padding:12px 20px;background:rgba(11,33,63,.5);border:1px solid rgba(31,159,230,.4);border-radius:4px;-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);vertical-align:top}
+.lfsp-page .seat-dots{display:flex;align-items:center;gap:6px}
+.lfsp-page .seat-dots i{display:block;flex-shrink:0;width:8px;height:8px;border-radius:999px;border:1px solid var(--white);animation:lfsp-seat 3s infinite}
+.lfsp-page .seat-dots i.taken{border:0;background:var(--blue);animation:none}
+.lfsp-page .seat-dots i:nth-child(2){animation-delay:0s}
+.lfsp-page .seat-dots i:nth-child(3){animation-delay:.5s}
+.lfsp-page .seat-dots i:nth-child(4){animation-delay:1s}
+.lfsp-page .seat-dots i:nth-child(5){animation-delay:1.5s}
+.lfsp-page .seat-dots i:nth-child(6){animation-delay:2s}
+.lfsp-page .seat-dots i:nth-child(7){animation-delay:2.5s}
+.lfsp-page .seat-dots i:nth-child(8){animation-delay:3s}
+.lfsp-page .seat-dots i:nth-child(9){animation-delay:3.5s}
+.lfsp-page .seat-dots i:nth-child(10){animation-delay:4s}
+.lfsp-page .seat-dots i:nth-child(11){animation-delay:4.5s}
+.lfsp-page .seat-dots i:nth-child(12){animation-delay:5s}
+.lfsp-page .seat-rule{width:1px;height:16px;background:rgba(31,159,230,.3)}
+.lfsp-page .seat-text{font-size:12px;font-weight:600;line-height:15px;letter-spacing:1.5px;text-transform:uppercase;color:var(--white)}
+.lfsp-page .seat-note{margin-top:10px;padding:10px 0;font-size:14px;line-height:18.2px;color:rgba(253,252,251,.65);text-align:center}
+.lfsp-page .scroll-cue{display:flex;flex-direction:column;align-items:center;margin-top:30px;animation:lfsp-bounce 2.4s infinite}
+.lfsp-page .scroll-cue svg{width:20px;height:20px;color:var(--blue);opacity:.7}
+.lfsp-page .scroll-cue svg + svg{opacity:.4;margin-top:-12px}
+@keyframes lfsp-seat{0%,100%{opacity:.35;transform:scale(1)}50%{opacity:1;transform:scale(1.25)}}
+@keyframes lfsp-bounce{0%,20%,50%,80%,100%{transform:translateY(0)}40%{transform:translateY(8px)}60%{transform:translateY(4px)}}
+
+/* ---------- cards ---------- */
+.lfsp-page .pcard{background:var(--white);border:1px solid var(--line);border-radius:8px;padding:40px;transition:all .35s ease}
+.lfsp-page .pcard:hover{border-color:#0aefb533;transform:translateY(-4px);box-shadow:0 12px 30px rgba(0,0,0,.18),inset 0 1px 0 rgba(255,255,255,.06)}
+.lfsp-page .glass{position:relative;overflow:hidden;padding:40px;background:var(--glass);-webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px);border:1px solid var(--line);border-radius:8px;transition:transform .3s ease,box-shadow .3s ease,border-color .3s ease}
+.lfsp-page .glass::before{content:"";position:absolute;inset:0;z-index:0;opacity:0;transition:opacity .5s ease;pointer-events:none;background:radial-gradient(circle at left top,rgba(31,159,230,.25) 0%,transparent 60%),radial-gradient(circle at right bottom,rgba(31,159,230,.25) 0%,transparent 60%)}
+.lfsp-page .glass > *{position:relative;z-index:1}
+.lfsp-page .glass:hover{transform:translateY(-4px);border-color:rgba(31,159,230,.4);box-shadow:0 20px 40px rgba(0,0,0,.25),0 0 30px rgba(31,159,230,.15)}
+.lfsp-page .glass:hover::before{opacity:1}
+.lfsp-page .gap20 > * + *{margin-left:20px}
+.lfsp-page .gap30 > * + *{margin-left:30px}
+
+/* ---------- audience ---------- */
+.lfsp-page .fit{display:flex;align-items:flex-start;gap:14px}
+.lfsp-page .fit-ico{display:flex;align-items:center;justify-content:center;flex-shrink:0;width:40px;height:40px;border-radius:8px;background:#EAF5FE;color:var(--blue)}
+.lfsp-page .fit-ico svg{width:20px;height:20px}
+.lfsp-page .fit-body{flex:1}
+.lfsp-page .fit-body h3{margin-bottom:8px;font-size:20px;font-weight:600;line-height:28px;color:var(--navy)}
+.lfsp-page .fit-body p{font-size:15px;line-height:22.5px;color:var(--ink)}
+.lfsp-page .notfit{padding:40px;background:var(--navy);border-left:3px solid var(--teal);border-radius:8px}
+.lfsp-page .marks{padding:10px 0 0 24px}
+.lfsp-page .marks li{position:relative;padding-left:8px;font-size:16px;line-height:32px;color:var(--on-navy)}
+.lfsp-page .marks li::before{content:"";position:absolute;left:-13px;top:10px;width:12px;height:12px;background:no-repeat center/contain}
+.lfsp-page .marks.no li::before{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cpath d='M2 2l8 8M10 2l-8 8' fill='none' stroke='%23FF0303' stroke-width='2.6' stroke-linecap='round'/%3E%3C/svg%3E")}
+.lfsp-page .marks.yes li::before{left:-17px;top:9px;width:15px;height:15px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M2 8.6l4 4L14 4.2' fill='none' stroke='%231F9FE6' stroke-width='2.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")}
+
+/* ---------- method ---------- */
+.lfsp-page .layer h3{padding:10px 0;font-family:var(--f-grotesk);font-size:22px;font-weight:600;line-height:27.9px;color:var(--white);text-align:center}
+.lfsp-page .layer p:not(.eyebrow){padding:0 0 10px;font-family:var(--f-dm);font-size:14px;font-style:italic;line-height:29px;color:var(--on-navy);text-align:center}
+.lfsp-page .layer-sub{padding:10px 0;font-family:var(--f-grotesk);font-size:22.2px;font-weight:600;line-height:29px;color:var(--blue)}
+
+/* ---------- case studies ---------- */
+.lfsp-page .tick{padding:10px 0}
+.lfsp-page .tick i{display:block;width:10%;margin:10px auto 5px;border-top:2px solid var(--blue)}
+.lfsp-page .case{padding:10px 5px;background:var(--white);border:1px solid var(--teal);border-radius:5px;transition:all .35s ease}
+.lfsp-page .case:hover{transform:translateY(-4px);box-shadow:0 12px 30px rgba(0,0,0,.18)}
+.lfsp-page .case-in{padding:40px}
+.lfsp-page .case-split{display:flex;padding:10px 5px 10px 0}
+.lfsp-page .case-art{flex:0 0 22.8%;padding:10px 5px 10px 0}
+.lfsp-page .case-art figure{padding:10px 10px 10px 0;line-height:0}
+.lfsp-page .case-art img{width:180px;height:auto}
+.lfsp-page .case-story{flex:1 1 0;min-width:0;padding:10px 5px}
+.lfsp-page .case-story .tx{margin-top:0;padding:0 0 10px}
+.lfsp-page .case-story .tx.it{font-style:italic}
+.lfsp-page .byline{margin-top:20px;padding:0 0 10px;font-size:16px;font-weight:700;line-height:22.4px;color:#000}
+.lfsp-page .byline.sm{font-size:14px}
+.lfsp-page .pills{display:flex;padding:20px 0 20px 16px}
+.lfsp-page .pill{display:flex;align-items:center;justify-content:center;padding:5px 20px 5px 15px;border:3px solid var(--orange);border-radius:50px;background:var(--orange);font-family:var(--f-sans);font-size:12px;font-weight:700;line-height:17px;text-transform:uppercase;white-space:nowrap;color:var(--white)}
+.lfsp-page .pill + .pill{margin-left:30px}
+.lfsp-page .pill + .pill + .pill{margin-left:34px}
+.lfsp-page .case-quote{margin-top:30px;padding:25px 10px 25px 25px;background:var(--snow);border-left:3px solid var(--teal)}
+.lfsp-page .case-quote svg{display:block;width:40px;height:40px;margin-bottom:4px}
+.lfsp-page .case-quote blockquote{padding:0 0 10px;font-family:var(--f-quote);font-size:18px;font-style:italic;line-height:28.8px;color:var(--ink)}
+.lfsp-page .stats{margin-top:60px;margin-bottom:60px;padding:20px 10px;background:var(--navy)}
+.lfsp-page .stats-in{display:flex;justify-content:center;align-items:flex-start;gap:80px;padding:20px;text-align:center}
+.lfsp-page .stat{width:320px;max-width:320px}
+.lfsp-page .stat b{display:block;margin-bottom:16px;font-family:var(--f-grotesk);font-size:52px;font-weight:800;line-height:57.2px;color:var(--orange)}
+.lfsp-page .stat p{font-size:18px;line-height:25.2px;color:rgba(245,241,234,.6);text-align:center}
+.lfsp-page .tq{flex:1 1 0;min-width:0;padding:30px 30px 20px;background:var(--white);border:1px solid var(--line-cool);border-radius:5px;box-shadow:0 0 8px 0 #C6C5C5;transition:all .35s ease}
+.lfsp-page .tq:hover{transform:translateY(-4px);box-shadow:0 12px 30px rgba(0,0,0,.18)}
+.lfsp-page .tq blockquote{padding:0 0 10px;font-family:var(--f-quote);font-size:16px;font-style:italic;line-height:25.6px;color:var(--ink)}
+.lfsp-page .tq figcaption{line-height:0;padding-bottom:4px}
+.lfsp-page .tq figcaption svg{height:58px;width:auto}
+.lfsp-page .tq.lift figcaption{margin-top:10px}
+.lfsp-page .tq.solo{flex:0 0 31.5%;padding:30px}
+.lfsp-page .ghost{flex:1 1 0;padding:40px}
+
+/* ---------- deliverables ---------- */
+.lfsp-page .deliv{flex:1 1 0;min-width:0}
+.lfsp-page .deliv .ico{display:block;height:54px;line-height:0}
+.lfsp-page .deliv .ico svg{width:50px;height:50px}
+.lfsp-page .deliv h3{padding:10px 0;font-size:20px;font-weight:600;line-height:27.9px;color:var(--navy)}
+.lfsp-page .deliv p{padding:0 0 10px;font-size:16px;line-height:27.9px;color:var(--ink)}
+
+/* ---------- schedule ---------- */
+.lfsp-page .timeline{position:relative;max-width:1000px;margin:0 auto;padding-left:90px}
+.lfsp-page .timeline::before{content:"";position:absolute;left:42px;top:0;bottom:0;width:1px;background:var(--blue);opacity:.35}
+.lfsp-page .tl-item{position:relative;padding-bottom:70px}
+.lfsp-page .tl-item::before{content:"";position:absolute;left:-48px;top:6px;width:10px;height:10px;background:var(--blue);transform:translateX(-50%) rotate(45deg);box-shadow:0 0 0 4px #082a53,0 0 12px rgba(31,159,230,.35)}
+.lfsp-page .tl-label{margin-bottom:6px;font-family:var(--f-mono);font-size:11px;font-weight:600;line-height:14px;letter-spacing:1.5px;text-transform:uppercase;color:var(--blue)}
+.lfsp-page .tl-date{margin-bottom:18px;font-family:var(--f-dm);font-size:14px;line-height:19.5px;color:rgba(255,255,255,.6)}
+.lfsp-page .tl-item h3{margin-bottom:12px;font-family:var(--f-serif);font-size:40px;font-weight:500;line-height:1.05;color:var(--white)}
+.lfsp-page .tl-sub{margin-bottom:26px;font-family:var(--f-mono);font-size:14px;font-weight:600;line-height:18px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.5)}
+.lfsp-page .tl-body{margin-bottom:34px;font-size:16px;line-height:1.6;color:rgba(255,255,255,.85)}
+.lfsp-page .takeaway{padding:20px;background:rgba(255,255,255,.04);border-left:2px solid var(--blue)}
+.lfsp-page .takeaway span{display:block;margin-bottom:10px;font-family:var(--f-mono);font-size:10px;font-weight:600;line-height:13px;letter-spacing:1.5px;text-transform:uppercase;color:var(--blue)}
+.lfsp-page .takeaway p{font-size:15px;line-height:1.6;color:rgba(255,255,255,.85)}
+
+/* ---------- graduates ---------- */
+.lfsp-page .grad{flex:1 1 0;min-width:0}
+.lfsp-page .grad-who{display:flex;align-items:center;gap:12px}
+.lfsp-page .grad-who svg{flex-shrink:0;width:48px;height:48px}
+.lfsp-page .grad-who div{display:flex;flex-direction:column}
+.lfsp-page .grad-who b{font-size:16px;font-weight:700;line-height:19.2px;color:var(--navy)}
+.lfsp-page .grad-who b.gap{margin-bottom:4px}
+.lfsp-page .grad-who small{margin-top:4px;font-family:var(--f-dm);font-size:12px;line-height:15.6px;color:#7A7468}
+.lfsp-page .grad blockquote{margin-top:10px;padding:10px 0;font-size:16px;font-style:italic;line-height:27.9px;color:var(--ink)}
+
+/* ---------- experience ---------- */
+.lfsp-page .venues{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.lfsp-page .venue{position:relative;overflow:hidden;aspect-ratio:4/3;border-radius:8px;background:var(--navy);cursor:pointer}
+.lfsp-page .venue img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .7s ease-out}
+.lfsp-page .venue:hover img{transform:scale(1.1)}
+.lfsp-page .venue::after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(to top,rgba(11,33,63,.85) 0%,rgba(11,33,63,.35) 25%,rgba(11,33,63,0) 55%)}
+.lfsp-page .venue figcaption{position:absolute;left:16px;bottom:16px;z-index:2;font-family:var(--f-mono);font-size:11px;font-weight:600;line-height:1.4;letter-spacing:1.5px;text-transform:uppercase;color:var(--white)}
+.lfsp-page .logi{flex:1 1 0;min-width:0;background:var(--snow)}
+.lfsp-page .logi-head{display:flex;align-items:center;gap:12px;height:60px}
+.lfsp-page .logi-head span{display:block;flex:0 0 60px;height:60px;line-height:0}
+.lfsp-page .logi-head svg{width:50px;height:50px}
+.lfsp-page .logi-head b{font-family:var(--f-mono);font-size:11px;font-weight:600;line-height:1;letter-spacing:2px;text-transform:uppercase;color:var(--blue)}
+.lfsp-page .logi p{padding:0 0 10px;font-size:16px;line-height:27.9px;color:var(--ink)}
+
+/* ---------- bonuses ---------- */
+.lfsp-page .bonus{padding:10px 5px 10px 30px;border-left:2px solid var(--blue)}
+.lfsp-page .bonus h3{display:flex;align-items:center;gap:16px;font-size:18px;font-weight:400;line-height:23.4px;color:var(--white)}
+.lfsp-page .bonus h3 svg{flex-shrink:0;width:22px;height:22px;color:var(--blue)}
+.lfsp-page .bonus p{margin-top:10px;padding:10px 0;font-size:16px;line-height:27.9px;color:var(--on-navy)}
+.lfsp-page .bonus.tip{padding:15px 5px 20px 30px;background:#192235;border-left-color:var(--orange)}
+.lfsp-page .bonus.tip .eyebrow{font-weight:700;color:var(--orange)}
+.lfsp-page .bonus.tip p{margin-top:0;font-size:18px;color:var(--white)}
+
+/* ---------- team ---------- */
+.lfsp-page .team-photo{flex:0 0 31.75%;padding:10px 5px}
+.lfsp-page .portrait{max-width:280px;margin:0 auto;aspect-ratio:4/5;overflow:hidden;border-radius:8px;background:var(--navy);box-shadow:0 10px 30px rgba(0,0,0,.15)}
+.lfsp-page .portrait img{display:block;width:100%;height:100%;object-fit:cover;object-position:center;transition:transform .7s ease-out}
+.lfsp-page .portrait:hover img{transform:scale(1.03)}
+.lfsp-page .team-copy{flex:1 1 0;min-width:0;padding:0 5px 10px}
+.lfsp-page .team-copy > div{width:80%;margin:0 auto;padding:10px 10px 20px}
+
+/* ---------- pricing ---------- */
+.lfsp-page .plans{display:flex;margin-top:20px;padding:10px 5px}
+.lfsp-page .plan{position:relative;flex:1 1 0;min-width:0;padding:0 40px 40px;background:var(--glass);-webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px);border:1px solid var(--line);border-radius:8px;text-align:center;transition:transform .3s ease,box-shadow .3s ease,border-color .3s ease}
+.lfsp-page .plan + .plan{margin-left:30px}
+.lfsp-page .plan.featured{border-color:var(--blue)}
+.lfsp-page .plan:hover{transform:translateY(-4px);border-color:rgba(31,159,230,.4);box-shadow:0 20px 40px rgba(0,0,0,.25),0 0 30px rgba(31,159,230,.15)}
+.lfsp-page .plan-band{position:absolute;top:-13px;left:50%;z-index:5;transform:translateX(-50%);display:flex;align-items:center;justify-content:center;min-width:260px;padding:5px 20px 5px 15px;border-radius:5px;background:linear-gradient(90deg,#1F9FE6 0%,#0ABAB5 100%);font-family:var(--f-mono);font-size:11px;font-weight:800;line-height:15px;letter-spacing:2px;text-transform:uppercase;white-space:nowrap;color:var(--white)}
+.lfsp-page .plan-price{margin-top:40px;padding:10px 0;font-family:var(--f-grotesk);font-size:56px;font-weight:800;line-height:27.9px;color:var(--white);text-align:center}
+.lfsp-page .plan.featured .plan-price{margin-top:45px}
+.lfsp-page .plan-label{padding:10px 0;font-family:var(--f-mono);font-size:13px;font-weight:400;line-height:16.9px;letter-spacing:2px;text-transform:uppercase;color:var(--on-navy);text-align:center}
+.lfsp-page .plan .marks{margin-top:10px;text-align:left}
+.lfsp-page .after-plans{margin-top:10px;padding:10px 0;font-size:14px;line-height:27.9px;color:var(--on-navy)}
+
+/* ---------- note from Joy ---------- */
+.lfsp-page .hr{padding:15px 0}
+.lfsp-page .hr i{display:block;border-top:1px solid var(--line-cool)}
+.lfsp-page .sig-line{font-family:var(--f-quote);font-size:16px;font-style:italic;line-height:27.9px;color:var(--blue)}
+
+/* ---------- FAQ ---------- */
+.lfsp-page .faq-card{margin-top:20px}
+.lfsp-page .faq-card summary{display:flex;align-items:center;justify-content:space-between;padding:15px;border-top:1px solid #E2E8F0;cursor:pointer;list-style:none;transition:background-color .3s ease}
+.lfsp-page .faq-card summary::-webkit-details-marker{display:none}
+.lfsp-page .faq-card summary h3{font-family:var(--f-grotesk);font-size:20px;font-weight:700;line-height:30px;color:var(--navy);transition:color .3s ease,text-shadow .3s ease}
+.lfsp-page .faq-card .tog{flex-shrink:0;width:16px;height:16px;border-radius:50%;color:var(--navy);transition:color .3s ease,background-color .3s ease}
+.lfsp-page .faq-card .tog svg{display:block;width:16px;height:16px}
+.lfsp-page .faq-card .tog .v{transition:opacity .2s ease}
+.lfsp-page .faq-card details[open] .tog .v{opacity:0}
+.lfsp-page .faq-card summary:hover,.lfsp-page .faq-card details[open] summary{background-color:#EAF2F7}
+.lfsp-page .faq-card summary:hover h3,.lfsp-page .faq-card details[open] summary h3{color:#209FE6;text-shadow:0 0 8px rgba(248,96,17,.15)}
+.lfsp-page .faq-card summary:hover .tog,.lfsp-page .faq-card details[open] .tog{color:var(--orange);background-color:#f860111a}
+.lfsp-page .faq-card .a{overflow:hidden}
+.lfsp-page .faq-card .a-in{padding:15px;font-size:18px;line-height:27px;color:rgba(11,33,63,.8)}
+
+/* ---------- close ---------- */
+.lfsp-page .glow{overflow:hidden}
+.lfsp-page .glow::before{content:"";position:absolute;top:-250px;left:50%;z-index:0;width:1400px;height:900px;transform:translateX(-50%);pointer-events:none;background:radial-gradient(ellipse at center,rgba(0,123,255,.30) 0%,rgba(0,123,255,.18) 30%,rgba(0,123,255,.08) 50%,rgba(0,123,255,.03) 65%,transparent 80%)}
+.lfsp-page .path{flex:1 1 0;min-width:0}
+.lfsp-page .path.build{border-color:var(--blue);border-left-width:3px}
+.lfsp-page .path-tag{display:flex;align-items:center;gap:8px;min-height:28px;font-family:var(--f-mono);font-size:11px;font-weight:600;line-height:1;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.5)}
+.lfsp-page .path-tag svg{flex-shrink:0;width:18px;height:18px}
+.lfsp-page .path.build .path-tag{color:var(--blue)}
+.lfsp-page .path.build .path-tag span{background:linear-gradient(90deg,#1F9FE6 0%,#0ABAB5 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent}
+.lfsp-page .path p{padding:10px 0;font-size:16px;font-style:italic;line-height:27.9px;color:var(--on-navy)}
+.lfsp-page .where{margin-top:20px;padding:10px 0;font-family:var(--f-serif);font-size:18px;font-style:italic;line-height:27.9px;color:var(--blue);text-align:center}
+.lfsp-page .ask a{color:var(--blue)}
+
+/* ---------- floating bar: the live page has none ---------- */
+.lfsp-page .sticky{display:none}
+
+/* ---------- section padding and spacing helpers (after the components, so they win) ---------- */
+.lfsp-page .sec{padding:60px 0}
+.lfsp-page .sec.pad40{padding:40px 0}
+.lfsp-page .sec.pad20{padding:20px 0}
+.lfsp-page .sec.s-method{padding-bottom:80px}
+.lfsp-page .sec.s-faq{padding:20px 0 60px}
+.lfsp-page .sec.hero{padding:41px 0 60px}
+.lfsp-page .ptitle.ink{color:var(--ink)}
+.lfsp-page .eyebrow.plain{font-weight:400;color:var(--ink)}
+.lfsp-page .tail{padding:20px 10px}
+.lfsp-page .mt0{margin-top:0}
+.lfsp-page .mt10{margin-top:10px}
+.lfsp-page .mt20{margin-top:20px}
+.lfsp-page .mt30{margin-top:30px}
+.lfsp-page .mt60{margin-top:60px}
+.lfsp-page .mb40{margin-bottom:40px}
+.lfsp-page .pb40{padding-bottom:40px}
+.lfsp-page .pb70{padding-bottom:70px}
+.lfsp-page .tc{text-align:center}
+
+/* ---------- motion: text and cards rise in as they enter the screen (scripts on only) ---------- */
+.lfsp-page.motion main :where(.hero h1,.deck,.seat-note,.eyebrow,.ptitle,.tx,.punch,.pullq,.bigq,.serif-note,.layer-sub,.layer h3,.layer p,.fitcard,.notfit,.pill,.case-quote blockquote,.byline,.tq blockquote,.deliv h3,.deliv p,.grad blockquote,.logi p,.bonus p,.plan-price,.plan-label,.plan-band,.after-plans,.sig-line,.path p,.where):not(.in){opacity:0}
+.lfsp-page.motion main :where(.hero h1,.deck,.seat-note,.eyebrow,.ptitle,.tx,.punch,.pullq,.bigq,.serif-note,.layer-sub,.layer h3,.layer p,.fitcard,.notfit,.pill,.case-quote blockquote,.byline,.tq blockquote,.deliv h3,.deliv p,.grad blockquote,.logi p,.bonus p,.plan-price,.plan-label,.plan-band,.after-plans,.sig-line,.path p,.where).in{animation:lfsp-up 1s both}
+.lfsp-page.motion main .ptitle.in,.lfsp-page.motion main .plan-band.in{animation-name:lfsp-in}
+@keyframes lfsp-up{from{opacity:0;transform:translate3d(0,40px,0)}to{opacity:1}}
+@keyframes lfsp-in{from{opacity:0}to{opacity:1}}
+@media (prefers-reduced-motion:reduce){
+  .lfsp-page.motion main :where(.hero h1,.deck,.seat-note,.eyebrow,.ptitle,.tx,.punch,.pullq,.bigq,.serif-note,.layer-sub,.layer h3,.layer p,.fitcard,.notfit,.pill,.case-quote blockquote,.byline,.tq blockquote,.deliv h3,.deliv p,.grad blockquote,.logi p,.bonus p,.plan-price,.plan-label,.plan-band,.after-plans,.sig-line,.path p,.where):not(.in){opacity:1}
+  .lfsp-page.motion main :where(.hero h1,.deck,.seat-note,.eyebrow,.ptitle,.tx,.punch,.pullq,.bigq,.serif-note,.layer-sub,.layer h3,.layer p,.fitcard,.notfit,.pill,.case-quote blockquote,.byline,.tq blockquote,.deliv h3,.deliv p,.grad blockquote,.logi p,.bonus p,.plan-price,.plan-label,.plan-band,.after-plans,.sig-line,.path p,.where).in{animation:none}
+  .lfsp-page .seat-dots i,.lfsp-page .scroll-cue{animation:none}
+  .lfsp-page .pbtn,.lfsp-page .pcard,.lfsp-page .glass,.lfsp-page .plan,.lfsp-page .tq,.lfsp-page .case{transition:none}
+}
+
+/* ---------- tablet ---------- */
+@media (max-width:1024px){
+  .lfsp-page .nav-links a{margin-left:4px}
+  .lfsp-page .brandmark{flex-basis:130px}
+  .lfsp-page .sec.hero{padding-top:60px}
+  .lfsp-page .hero-bg{top:0;height:100%}
+}
+
+/* ---------- phone ---------- */
+@media (max-width:767px){
+  .lfsp-page .wrap{padding-left:0;padding-right:0}
+  .lfsp-page .sec,.lfsp-page .sec.pad40,.lfsp-page .sec.s-faq{padding:20px 10px 40px}
+  .lfsp-page .sec.deep,.lfsp-page .sec.deep.s-method{padding:20px 20px 40px}
+  .lfsp-page .rw,.lfsp-page .rw.cols{width:100%;padding:20px 10px}
+  .lfsp-page .rw.cols{flex-direction:column;padding:10px}
+  .lfsp-page .rw .rw{padding-left:10px;padding-right:10px}
+  .lfsp-page .deep .rw .rw{padding-left:0;padding-right:0}
+  .lfsp-page .deep .rw .rw.w80{padding-left:10px;padding-right:10px}
+  .lfsp-page .rw.cols > *{flex:none}
+  .lfsp-page .cl{padding:10px 0}
+  .lfsp-page .pcard,.lfsp-page .glass,.lfsp-page .notfit{padding:40px}
+  .lfsp-page .gap20 > * + *,.lfsp-page .gap30 > * + *{margin-left:0;margin-top:20px}
+  .lfsp-page .ghost{display:none}
+  .lfsp-page .gap20 > .ghost + *{margin-top:0}
+
+  .lfsp-page .eyebrow{font-size:14px;line-height:18.2px}
+  .lfsp-page .eyebrow.xs{font-size:11px;line-height:15px}
+  .lfsp-page .eyebrow.keep{font-size:16px;line-height:20.8px}
+  .lfsp-page .ptitle,.lfsp-page .ptitle.md{font-size:32px;line-height:38.4px}
+  .lfsp-page .ptitle.snug{line-height:32px}
+  .lfsp-page .tx,.lfsp-page .tx.lg{font-size:16px;line-height:25.6px}
+  .lfsp-page .tx.fx{line-height:27.9px;padding:0 0 10px}
+  .lfsp-page .tx.fx.loose{line-height:25px}
+  .lfsp-page .tx.sm{font-size:16px}
+  .lfsp-page .tx.plead{font-size:16px;line-height:25.6px}
+  .lfsp-page .pullq{padding-left:10px;font-size:18px;line-height:28.8px}
+  .lfsp-page .punch{font-size:18px;line-height:23.4px}
+  .lfsp-page .punch.md{margin-top:10px;padding:10px;font-size:18px;line-height:22px;text-align:left}
+  .lfsp-page .punch.sm{padding:0 0 10px;font-size:16px;line-height:27.9px}
+  .lfsp-page .punch.sm.loose,.lfsp-page .serif-note.loose{line-height:25px}
+  .lfsp-page .bigq{font-size:20px;line-height:26px}
+  .lfsp-page .serif-note{padding:0 0 10px;font-size:20px}
+  .lfsp-page .pbtn{padding:20px;font-size:16px}
+  .lfsp-page .btn-cta{min-width:286px}
+
+  .lfsp-page .pnav-bar{padding:8px 0}
+  .lfsp-page .pnav-in{display:grid;grid-template-columns:1fr auto;height:auto;padding:10px;row-gap:0}
+  .lfsp-page .brandmark{grid-column:1;flex:none;height:45px;padding:8px 0 8px 10px;background:var(--white)}
+  .lfsp-page .brandmark img{width:122px;height:24px}
+  .lfsp-page .nav-toggle{grid-column:2;display:flex;align-items:center;justify-content:center;width:37px;height:45px;padding:0 10px 0 6px;border:0;border-radius:0;background:var(--white);color:#000;cursor:pointer}
+  .lfsp-page .nav-toggle svg{width:12px;height:12px}
+  .lfsp-page .nav-cta{grid-column:1 / -1;justify-self:center;min-width:286px;padding:10px 20px;font-size:16px}
+  .lfsp-page .nav-links{display:none;grid-column:1 / -1;grid-row:2;flex-direction:column;align-items:stretch;padding:8px 10px 12px;background:rgba(6,13,24,.96)}
+  .lfsp-page .pnav.open .nav-links{display:flex}
+  .lfsp-page .nav-links a{margin:0;padding:12px 6px;font-size:12px;line-height:16px}
+
+  .lfsp-page .sec.hero{padding:10px 10px 20px}
+  .lfsp-page .sec.pad20{padding:20px 10px}
+  .lfsp-page .hero-bg{top:0;height:100%}
+  .lfsp-page .hero h1{padding-bottom:0;font-size:42px;line-height:44px}
+  .lfsp-page .hero .deck{font-size:16px;line-height:25.6px}
+  .lfsp-page .facts{flex-direction:column;gap:10px}
+  .lfsp-page .fact{width:100%;justify-content:center;padding:12px 16px}
+  .lfsp-page .hero-act{width:100%;padding:10px}
+  .lfsp-page .hero-act > div{padding:10px 0}
+  .lfsp-page .seats{width:100%;justify-content:center;gap:12px;padding:12px 14px}
+  .lfsp-page .seat-text{font-size:11px;line-height:14px}
+  .lfsp-page .seat-note{font-size:12px;line-height:15.6px}
+
+  .lfsp-page .fit-ico{width:38px;height:38px}
+  .lfsp-page .fit-ico svg{width:18px;height:18px}
+  .lfsp-page .fit-body h3{font-size:18px;line-height:26px}
+  .lfsp-page .layer p:not(.eyebrow){font-size:16px;line-height:27.9px}
+  .lfsp-page .layer h3{padding:10px 0 5px}
+  .lfsp-page .layer-sub{padding:10px 0 5px;font-size:18px;line-height:27.9px}
+
+  .lfsp-page .case{margin-top:10px;padding:10px}
+  .lfsp-page .case-in{padding:32px}
+  .lfsp-page .case-split{display:block;padding:10px}
+  .lfsp-page .case.c2 .case-split{padding:10px 0}
+  .lfsp-page .case-art{flex:none;padding:10px 0}
+  .lfsp-page .case-art img{width:160px}
+  .lfsp-page .case.c2 .case-art img{width:180px}
+  .lfsp-page .case-story{padding:10px 0}
+  .lfsp-page .byline{line-height:19.2px}
+  .lfsp-page .byline.sm{font-size:12px}
+  .lfsp-page .pills{display:block;padding:10px 10px 10px 0}
+  .lfsp-page .pills.p11{padding:0 0 10px}
+  .lfsp-page .pill{width:fit-content;margin:0 0 10px;font-size:10px;line-height:14px;justify-content:flex-start}
+  .lfsp-page .pill + .pill,.lfsp-page .pill + .pill + .pill{margin-left:0}
+  .lfsp-page .pills.p11 .pill{font-size:11px;line-height:15px}
+  .lfsp-page .case-quote{margin-top:10px;padding:25px 10px 25px 10px}
+  .lfsp-page .case-quote blockquote{font-size:16px;line-height:25.6px}
+  .lfsp-page .stats{margin-top:40px;margin-bottom:40px;padding:20px 10px}
+  .lfsp-page .stats-in{flex-direction:column;gap:40px}
+  .lfsp-page .stat{width:100%;max-width:320px}
+  .lfsp-page .stat b{font-size:32px;line-height:35.2px}
+  .lfsp-page .stat p{font-size:16px;line-height:22.4px}
+  .lfsp-page .tq,.lfsp-page .tq.solo{flex:none;padding:32px}
+  .lfsp-page .case-in{padding:32px}
+  .lfsp-page .deliv h3{padding:10px 0 5px;font-size:18px}
+
+  .lfsp-page .timeline{padding-left:55px}
+  .lfsp-page .timeline::before{left:22px}
+  .lfsp-page .tl-item::before{left:-38px}
+  .lfsp-page .tl-item h3{font-size:32px}
+  .lfsp-page .grad-who b{font-size:15px;line-height:18px}
+  .lfsp-page .grad blockquote{margin-top:0;padding:10px 0 10px}
+
+  .lfsp-page .venues{grid-template-columns:1fr}
+  .lfsp-page .venue figcaption{font-size:10px;letter-spacing:1.2px}
+  .lfsp-page .logi p{padding:10px 0}
+  .lfsp-page .bonus{padding:10px 0 10px 0;border-left-width:2px}
+  .lfsp-page .bonus h3{align-items:flex-start;gap:12px}
+  .lfsp-page .bonus.first h3{font-size:16px;line-height:20.8px}
+  .lfsp-page .bonus p{margin-top:10px;padding:0 0 10px}
+  .lfsp-page .bonus.tip{padding:15px 0 20px}
+  .lfsp-page .bonus.tip p{font-size:16px}
+  .lfsp-page .team-photo{padding:10px 0}
+  .lfsp-page .team-copy{padding:0 0 10px}
+  .lfsp-page .team-copy > div{width:100%;padding:10px 10px 10px}
+
+  .lfsp-page .plans{display:block;padding:10px}
+  .lfsp-page .plan{margin-top:20px}
+  .lfsp-page .plan + .plan{margin-left:0}
+  .lfsp-page .plan-price{padding:10px 0 5px;font-size:46px;line-height:50px}
+  .lfsp-page .plan .pbtn{min-width:0;padding:20px 30px}
+  .lfsp-page .after-plans{padding:10px;font-size:16px;line-height:25px}
+  .lfsp-page .faq-card summary h3{font-size:18px;line-height:27px}
+  .lfsp-page .faq-card .a-in{font-size:16px;line-height:24px}
+  .lfsp-page .where{padding:0 0 10px;font-size:22px}
+  .lfsp-page .path p{padding:0 0 10px}
+
+  /* per-section spacing, as measured on the live phone layout */
+  .lfsp-page .mt30{margin-top:20px}
+  .lfsp-page .mb40{margin-bottom:20px}
+  .lfsp-page .pb40{padding-bottom:40px}
+  .lfsp-page .pb70{padding-bottom:50px}
+  .lfsp-page .tail{padding:10px 10px 20px}
+  .lfsp-page .punch.sm.sig-name{margin-top:10px}
+  .lfsp-page [data-section="problem"] .ptitle{line-height:41.6px}
+  .lfsp-page [data-section="problem"] .wrap > .rw + .rw{padding-top:10px}
+  .lfsp-page [data-section="problem"] .wrap > .rw + .rw > .tx:first-child{margin-top:0}
+  .lfsp-page [data-section="audience"] .rw.mt60{margin-top:0}
+  .lfsp-page [data-section="audience"] .ptitle{font-size:31px;line-height:40.3px}
+  .lfsp-page [data-section="audience"] .tx + .tx{margin-top:0}
+  .lfsp-page [data-section="cases"] .rw.gap20.mt10{margin-top:0}
+  .lfsp-page [data-section="schedule"] .wrap > .rw.w70:first-child{padding-bottom:10px}
+  .lfsp-page [data-section="schedule"] .rw > .rw:not(.w80){padding-top:10px}
+  .lfsp-page [data-section="schedule"] .wrap > .rw.mt10{margin-top:0;padding-top:10px}
+  .lfsp-page [data-section="graduates"] .rw > .rw.w80{padding-top:10px}
+  .lfsp-page [data-section="graduates"] .rw.mt20,.lfsp-page [data-section="graduates"] .cta-block{margin-top:0}
+  .lfsp-page [data-section="experience"] .rw > .rw.w80 + .rw.w80{padding-top:10px}
+  .lfsp-page [data-section="close"] .ptitle.mb40{margin-bottom:0}
+}
+
+</style>
+<div class="lfsp-page" id="lfsp-page"><script>document.getElementById("lfsp-page").classList.add("motion")</script>
+<header class="pnav" id="nav"><div class="pnav-bar"><div class="pnav-in">
+ <a class="brandmark" href="#top" aria-label="Book To Buyer: back to the top"><img src="https://assets.cdn.filesafe.space/kk3vQipkzejClUIZNuel/media/7ebd4dff-753c-4ec4-815c-674b7136c226.png" alt="Book To Buyer" width="1160" height="225"></a>
+ <button class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="nav-links"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M1 2.5h10M1 6h10M1 9.5h10"/></svg></button>
+ <nav class="nav-links" id="nav-links" aria-label="Page sections"><a href="#overview">Overview</a><a href="#audience">Audience</a><a href="#method">Method</a><a href="#deliverables">Deliverables</a><a href="#schedule">Schedule</a><a href="#experience">Experience</a><a href="#order">Pricing</a><a href="#faq">FAQ</a></nav>
+ <a class="pbtn btn-cta nav-cta" href="#order"><span class="ktext">RESERVE YOUR SEAT →</span></a>
+</div></div></header>
+<main id="top">
+<section class="sec hero" id="overview" data-section="hero">
+ <img class="hero-bg" src="https://assets.cdn.filesafe.space/Pf5iT5paoZ66Db8XqwBy/media/6a27cb03fc95b24549d5126c.webp" alt="" width="1900" height="1266">
+ <div class="wrap"><div class="rw w90">
+  <h1>Turn Your Expertise Into a Client-Attracting Book in 5 Days</h1>
+  <p class="deck">You do not need to be a writer. You need a process. Our AI-powered frameworks and live coaching turn your proven method into a finished book in 5 focused days.</p>
+  <div class="facts">
+   <div class="fact"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v4"></path><path d="M16 2v4"></path><rect width="18" height="18" x="3" y="4" rx="2"></rect><path d="M3 10h18"></path></svg><span>March 21 - 26, 2027</span></div>
+   <div class="fact"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg><span>ARIA Resort, Las Vegas</span></div>
+   <div class="fact"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg><span>12 Seats Only</span></div>
+  </div>
+  <div class="hero-act w45"><div>
+   <div class="seats"><div class="seat-dots" aria-hidden="true"><i class="taken"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="seat-rule"></div><div class="seat-text">11 of 12 Seats Remaining</div></div>
+   <p class="seat-note">Limited to 12 seats. When they are gone, they are gone.</p>
+   <div class="cta-block"><a class="pbtn btn-cta" href="#order"><span class="ktext">RESERVE YOUR SEAT →</span></a></div>
+   <div class="scroll-cue" aria-hidden="true"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"></path></svg><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"></path></svg></div>
+  </div></div>
+ </div></div>
+</section>
+<section class="sec pad40 bg-paper" data-section="problem">
+ <div class="wrap">
+  <div class="rw w70">
+   <p class="eyebrow">THE PROBLEM</p>
+   <h2 class="ptitle">Let me describe someone. See if this sounds familiar.</h2>
+  </div>
+  <div class="rw w70">
+   <p class="tx ink">You have deep expertise. Real client results. You might have 10, 15, 20 years of experience in your field. You know your stuff better than most people in your market.</p>
+   <p class="tx ink">But people with half your credentials are getting the attention. They are landing podcast invitations. They are attracting premium clients. They are positioning themselves as the authority in your space.</p>
+   <p class="tx ink">And you are sitting there thinking:<strong><em> I know more than that person. Why are they getting the opportunities?</em></strong></p>
+   <p class="pullq">"The answer is not that they are better at what they do. The answer is that they have a platform. And the fastest, most credible platform in the world is a strategically built book."</p>
+   <p class="punch">Your expertise is not the problem. Your visibility is.</p>
+   <p class="tx"><strong>But here is what nobody tells you.</strong></p>
+   <p class="tx"><strong>Most expert books fail. </strong>Not because the content is bad. Because the architecture is missing.</p>
+   <p class="tx">The author opens a Google Doc, stares at a blank page, writes a few chapters, and stops. Or worse: they finish the book, list it on Amazon, sell 200 copies to friends and family, and generate exactly zero clients.</p>
+   <p class="tx"><strong>That is not a writing problem. That is a structure problem. And structure is fixable.</strong></p>
+   <p class="pullq">"What if your book did not just sit on Amazon collecting digital dust? What if every chapter was engineered to move readers into your world? What if your book sold for you 24 hours a day, like a silent referral partner that never sleeps?"</p>
+   <p class="tx"><strong>That is what Book To Buyer LIVE builds. In 5 days. With me and my team in the room.</strong></p>
+   <p class="tx lg"><strong>This is not a writing retreat. It is a client-generating business accelerator disguised as a book event.</strong></p>
+   <div class="cta-block"><a class="pbtn btn-cta" href="#order"><span class="ktext">RESERVE YOUR SEAT →</span></a></div>
+  </div>
+ </div>
+</section>
+<section class="sec pad20 bg-white s-audience" id="audience" data-section="audience">
+ <div class="wrap"><div class="rw w70 mt60">
+  <p class="eyebrow">WHO THIS IS FOR</p>
+  <h2 class="ptitle">Who Book To Buyer Is For (and Who It Is Not)</h2>
+  <p class="tx mt30">This is not a writing retreat. It is not a passive seminar. It is not another content workshop you forget the moment you fly home.</p>
+  <p class="tx">Book To Buyer LIVE is a high-impact, done-with-you experience for experts, business owners, and service professionals who are ready to turn their proven method into a book that attracts clients and fuels their business.</p>
+  <div class="rw cols"><div class="cl pcard fitcard"><div class="fit"><span class="fit-ico"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></span><div class="fit-body">
+   <h3>You have a proven process that gets real results.</h3>
+   <p>You have done the work. You know your method delivers. You just have not turned it into a book that does the selling for you.</p>
+  </div></div></div></div>
+  <div class="rw cols"><div class="cl pcard fitcard"><div class="fit"><span class="fit-ico"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></span><div class="fit-body">
+   <h3>You are maxed out on 1:1 delivery.</h3>
+   <p>You are booked. You are busy. And you know there is a smarter way to reach more people without burning out.</p>
+  </div></div></div></div>
+  <div class="rw cols"><div class="cl pcard fitcard"><div class="fit"><span class="fit-ico"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></span><div class="fit-body">
+   <h3>You want a book that works as a business asset, not a vanity project.</h3>
+   <p>You are not interested in writing a memoir. You want a book with conversion architecture baked into every chapter.</p>
+  </div></div></div></div>
+  <div class="rw cols"><div class="cl pcard fitcard"><div class="fit"><span class="fit-ico"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></span><div class="fit-body">
+   <h3>You are ready to invest in the strategy, not just the story.</h3>
+   <p>You have spent money on coaches, programs, and marketing. This time you want ROI you can measure: a book that builds your list, sells your services, and works as a 24/7 client acquisition engine.</p>
+  </div></div></div></div>
+  <div class="rw cols"><div class="cl notfit">
+   <p class="eyebrow keep">NOT FOR YOU IF:</p>
+   <ul class="marks no">
+    <li>You do not have a proven method or real client results yet.</li>
+    <li>You are looking for a ghostwriter to do it for you.</li>
+    <li>You want to write a book "someday" but are not ready to commit 5 focused days.</li>
+   </ul>
+  </div></div>
+  <p class="punch md tc">Every graduate who followed the process finished their book in 5 days. <span class="hi">Every author who published hit #1 on Amazon.</span></p>
+  <div class="cta-block"><a class="pbtn btn-cta" href="#order"><span class="ktext">RESERVE YOUR SEAT →</span></a></div>
+ </div></div>
+</section>
+<section class="sec bg-navy deep s-method" id="method" data-section="method">
+ <div class="wrap">
+  <div class="rw w70">
+   <p class="eyebrow tc">THE BOOK TO BUYER METHOD</p>
+   <h2 class="ptitle on-dark tc">Most book programs teach you to write. We teach you to build a client acquisition engine.</h2>
+   <p class="tx snow">The Book To Buyer Method has three layers. Most programs stop at Layer 1. The good ones add Layer 2. Nobody connects all three. That is our open lane. And it is why every B2B graduate who followed the process completed their book in just five days.</p>
+   <div class="rw cols gap20 mt20">
+    <div class="cl glass layer"><p class="eyebrow keep tc">LAYER 01</p><h3>The Authority Book</h3><p>Your book as a positioning tool</p></div>
+    <div class="cl glass layer"><p class="eyebrow keep tc">LAYER 02</p><h3>The Book Funnel</h3><p>Your book as a client acquisition engine</p></div>
+    <div class="cl glass layer"><p class="eyebrow keep tc">LAYER 03</p><h3>The Authority Ecosystem</h3><p>Your book as a platform builder</p></div>
+   </div>
+  </div>
+  <div class="rw w70 mt20">
+   <p class="eyebrow xs">LAYER 01</p>
+   <h3 class="ptitle md on-dark">The Authority Book</h3>
+   <p class="layer-sub">Your book is not a memoir. It is a positioning tool.</p>
+   <div class="tx soft">
+    <p>Every chapter is reverse-engineered from one question: What does my ideal client need to believe in order to want to work with me?</p>
+    <p>We build what I call a Content Construct: your chapter-level blueprint that maps the key teaching points. Then we turn that Content Construct into a Cash Flow Construct: a framework where every chapter has built-in "waterslides" (QR codes, lead magnets, calls to action) that invite readers to go deeper through a supportive companion workbook. No hard selling in the chapters. Just genuine invitations to implement what they are learning.</p>
+    <p>The result is not just a book. It is a book that pre-sells your backend offer on every page.</p>
+   </div>
+  </div>
+  <div class="rw w70 mt20">
+   <p class="eyebrow xs">LAYER 02</p>
+   <h3 class="ptitle md on-dark">The Book Funnel</h3>
+   <p class="layer-sub">Amazon is the worst place to sell your expert book. (I know. Stay with me.)</p>
+   <div class="tx soft">
+    <p>Amazon treats your book like a commodity. It puts you next to 4 million other titles. It takes your margin. And it gives you the buyer's email exactly zero percent of the time.</p>
+    <p>A book funnel flips the model. You own the customer relationship. You control the math. Your book becomes a self-liquidating front-end offer: the ad spend you put in comes back to you through order bumps, upsells, and backend conversions.</p>
+    <p>The goal is not to make money selling books. The goal is to acquire clients at breakeven (or better) so you can serve them on the backend with your coaching, programs, and services. That is where the real revenue lives.</p>
+   </div>
+  </div>
+  <div class="rw w70 mt20 pb40 rule-glow">
+   <p class="eyebrow xs">LAYER 03</p>
+   <h3 class="ptitle md on-dark">The Authority Ecosystem</h3>
+   <p class="layer-sub">This is the layer nobody else builds. And it is the reason Book To Buyer graduates do not just publish a book. They build a platform.</p>
+   <div class="tx soft">
+    <p>Your book content does not live in the book alone. The same frameworks, stories, and teaching become: workbook content that fills your list. Video and podcast material for 12+ months. Social media content. Email nurture sequences. Speaking material. Client onboarding resources.</p>
+    <p>One book. Written once. Deployed across every revenue channel in your business.</p>
+    <p>This is not repurposing. This is architecture. You build the book with the ecosystem in mind from Day 1. That is why we map it all during B2B LIVE, not after.</p>
+   </div>
+   <div class="rw w70 mt10"><p class="bigq">"This is not a writing retreat. It is a client-generating business accelerator disguised as a book event."</p></div>
+  </div>
+ </div>
+</section>
+<section class="sec bg-snow" data-section="cases">
+ <div class="wrap">
+  <div class="rw w80">
+   <p class="eyebrow tc">Results From Real Authors</p>
+   <h2 class="ptitle snug tc">What Past Attendees Did <em>With Their Book To Buyer Book.</em></h2>
+   <div class="tick"><i></i></div>
+   <p class="tx plead tc">These are the books. These are the authors. These are the outcomes that happened after they flew home.</p>
+  </div>
+  <div class="rw cols w85 mt10 case"><div class="cl case-in">
+   <p class="eyebrow">Featured Case Study</p>
+   <h3 class="ptitle snug">The $10,000 Text Message That Changed Sherry's Practice.</h3>
+   <p class="tx ink"><strong><em>Dr. Sherry Brewer swore she would never write a book. Five days later, she had one. Here's her story,</em></strong></p>
+   <div class="case-split">
+    <div class="case-art">
+     <figure><img src="https://assets.cdn.filesafe.space/kk3vQipkzejClUIZNuel/media/1a909818-471a-4290-9928-a93bad59773c.png" alt="Why You Can't Lose Weight, by Sherry Brewer MD" width="582" height="870" loading="lazy"></figure>
+     <figure><img src="https://assets.cdn.filesafe.space/kk3vQipkzejClUIZNuel/media/6a6548756e8e00a9975eabe2.jpg" alt="Dr. Sherry Brewer" width="600" height="900" loading="lazy"></figure>
+    </div>
+    <div class="case-story">
+     <div class="tx it">
+      <p>I never thought I could write a book. I'm not a great writer. I'm analytical, more at home with data and charts than words. But I could talk anyone's ear off about functional medicine.</p>
+      <p>That was my problem. I knew my stuff, but I had no organized framework to describe what I do. So, I couldn't articulate it well on sales calls. And because I'd see anyone who wanted a functional medicine doctor, my clinic was full of patients with conditions I didn't particularly enjoy treating. I wanted a book that would give my process a framework and give me street cred with patients and peers. I also wanted it to get me on podcasts and stages.</p>
+      <p>Going in, I was scared. I didn't know how to organize it or what chapters to include. Then I got to Book To Buyer with Joy and Travis, and it was a blast.</p>
+      <p>They had the entire process laid out. We did the prep work mapping my process and gathering patient stories. Then we spent five days hunkered down at a fabulous hotel with other authors. I spent 20 hour speaking my content and never had to put pen to paper.</p>
+      <p>They literally pulled the book out of me. By day five I had my first draft in the book writing software, ISBN numbers, an author bio, KDP steps, and marketing tools like a workbook outline and a process to build a book funnel.</p>
+      <p>When I hit publish on Why You Can't Lose Weight, I filmed it and sent it to Joy and Travis. They were at a restaurant and filmed me right back, hooting and hollering. It made me cry. I hit #1 best seller, something I never dreamed I could do.</p>
+      <p>Since then, people I hadn't heard from in 40 years have reconnected. Patients sign up for 1:1 care just knowing I have a book, even before reading it. It feeds traction to my precision gut test. I've lectured and been on several podcasts. Best of all, it brings me the exact clients I want, and they tell me it felt like I wrote it for them.</p>
+      <p>If you're a busy practitioner on the fence: the process is rock solid. Give yourself five days. You won't regret it.</p>
+     </div>
+     <p class="byline">Dr. Sherry Brewer, Functional Medicine Practitioner and Author</p>
+    </div>
+   </div>
+   <div class="pills"><span class="pill">#1 amazon bestseller</span><span class="pill">filled patient roster</span><span class="pill">from idea to #1 bestseller in 58 days</span></div>
+   <div class="case-quote"><svg aria-hidden="true" width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"><text x="5" y="50" font-family="Playfair Display, serif" font-size="64" fill="#0ABAB5">“</text></svg>
+    <blockquote>My book is the reason my new patient calendar is full. Prospective patients read the book, understand my approach before they ever call the office, and show up ready to enroll. It took me five days to finish the book. It pays me every month it sits on Amazon.</blockquote>
+   </div>
+  </div></div>
+  <div class="rw w85 stats"><div class="stats-in">
+   <div class="stat"><b data-start="80" data-end="100" data-suffix="%">100%</b><p>Of attendees walk out with a completed book.</p></div>
+   <div class="stat"><b data-start="0" data-end="3" data-suffix=" MO">3 MO</b><p>From blank page to bestseller launch. No ghostwriter. No excuses.</p></div>
+  </div></div>
+  <div class="rw cols w85 mt10 case c2"><div class="cl case-in">
+   <p class="eyebrow">Featured Case Study</p>
+   <h3 class="ptitle snug">From Idea to #1 Amazon Bestseller in 31 Days. With a Foreword by Brian Tracy.</h3>
+   <p class="tx ink mt0"><em>Eric Berman spent years watching Brian Tracy build a publishing empire. When he decided to write his own book, he chose Book To Buyer. Here is what happened.</em></p>
+   <div class="case-split">
+    <div class="case-art">
+     <figure><img src="https://assets.cdn.filesafe.space/kk3vQipkzejClUIZNuel/media/334fe1e6-912f-498c-91b6-aabd7c2b9d70.png" alt="Proximity Pays, by Eric Berman" width="436" height="650" loading="lazy"></figure>
+    </div>
+    <div class="case-story">
+     <div class="tx">
+      <p>Eric Berman is not a writer. He is a businessman. He spent years watching Brian Tracy build one of the most prolific publishing empires of the last 40 years. He has seen every book system. He has watched hundreds of authors attempt, succeed, and struggle.</p>
+      <p>When Eric decided to finally write his own book, he did not go to a ghostwriter. He did not use the programs he had watched his clients try. He came to Book To Buyer LIVE.</p>
+      <p>Five days later, he walked out with a finished manuscript.</p>
+      <p>Three weeks after publication, his book, Proximity Pays, hit number one in three Amazon categories. Brian Tracy wrote the foreword.</p>
+     </div>
+    </div>
+   </div>
+   <div class="pills p11"><span class="pill">#1 in 3 amazon categories</span><span class="pill">foreword by brian tracy</span><span class="pill">from idea to bestseller in 31 days</span></div>
+   <div class="case-quote"><svg aria-hidden="true" width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"><text x="5" y="50" font-family="Playfair Display, serif" font-size="64" fill="#0ABAB5">“</text></svg>
+    <blockquote>I walked into the workshop with an idea. I walked out with a finished book, a launch plan, and Brian Tracy writing my foreword. Three weeks after publication, Proximity Pays hit number one in three Amazon categories. The Book To Buyer system did not teach me how to write. It taught me how to turn a book into a business asset.</blockquote>
+    <p class="byline sm">Eric Berman, Author of Proximity Pays</p>
+   </div>
+  </div></div>
+  <div class="rw cols w85 gap20 mt60">
+   <figure class="tq lift"><blockquote>“The AI frameworks are the difference. I tried writing for years. In Book To Buyer, the system wrote in my voice. I just steered it.”</blockquote><figcaption><svg role="img" width="260" height="58" viewBox="0 0 260 58" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="avatarGradient" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#1F9FE6"></stop><stop offset="100%" stop-color="#0ABAB5"></stop></linearGradient></defs><circle cx="20" cy="20" r="20" fill="url(#avatarGradient)"></circle><text x="20" y="25" text-anchor="middle" fill="#FFFFFF" font-family="Inter, sans-serif" font-size="12" font-weight="700">EB</text><text x="52" y="18" fill="#0B213F" font-family="Inter, sans-serif" font-size="14" font-weight="700">Eric Berman</text><text x="52" y="38" fill="rgba(11,33,63,.5)" font-family="Inter, sans-serif" font-size="12" font-weight="400">Author, Proximity Pays</text></svg></figcaption></figure>
+   <figure class="tq lift"><blockquote>“Travis and Joy did not teach me how to write a book. They taught me how to build a client-acquisition asset that happens to come in book form. Massive difference.”</blockquote><figcaption><svg role="img" width="260" height="58" viewBox="0 0 260 58" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="amberGradient" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#F86011"></stop><stop offset="100%" stop-color="#D4A85A"></stop></linearGradient></defs><circle cx="20" cy="20" r="20" fill="url(#amberGradient)"></circle><text x="20" y="20" fill="#FFFFFF" text-anchor="middle" dominant-baseline="central" style="font-family:'Inter',sans-serif; font-size:12px; font-weight:700; ">AB</text><text x="52" y="18" fill="#0B213F" style="font-family:'Inter',sans-serif; font-size:14px; font-weight:700; ">Dr. Amber Bocknek</text><text x="52" y="38" fill="#0B213F80" style="font-family:'Inter',sans-serif; font-size:12px; font-weight:400; ">Chiropractor &amp; Author</text></svg></figcaption></figure>
+   <figure class="tq lift"><blockquote>“I had a shelf of unfinished drafts. Five days at Book To Buyer produced a book I am actually proud to put my name on. The structure is what I was missing.”</blockquote><figcaption><svg role="img" width="290" height="58" viewBox="0 0 290 58" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="kaceyGradient" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#9333EA"></stop><stop offset="100%" stop-color="#EC4899"></stop></linearGradient></defs><circle cx="20" cy="20" r="20" fill="url(#kaceyGradient)"></circle><text x="20" y="20" fill="#FFFFFF" text-anchor="middle" dominant-baseline="central" style="font-family:'Inter',sans-serif; font-size:12px; font-weight:700; ">KW</text><text x="52" y="18" fill="#0B213F" style="font-family:'Inter',sans-serif; font-size:14px; font-weight:700; ">Dr. Kacey Wallace</text><text x="52" y="38" fill="#0B213F80" style="font-family:'Inter',sans-serif; font-size:12px; font-weight:400; ">Functional Medicine Practitioner</text></svg></figcaption></figure>
+  </div>
+  <div class="rw cols w85 gap20 mt10">
+   <figure class="tq"><blockquote>“As a physician, credibility is everything. My book opened doors speaking, podcasts, referrals that years of marketing never touched. This is the asset that compounds.”</blockquote><figcaption><svg role="img" width="270" height="58" viewBox="0 0 270 58" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="indraniGradient" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#059669"></stop><stop offset="100%" stop-color="#34D399"></stop></linearGradient></defs><circle cx="20" cy="20" r="20" fill="url(#indraniGradient)"></circle><text x="20" y="20" fill="#FFFFFF" text-anchor="middle" dominant-baseline="central" style="font-family:'Inter',sans-serif; font-size:12px; font-weight:700; ">IR</text><text x="52" y="18" fill="#0B213F" style="font-family:'Inter',sans-serif; font-size:14px; font-weight:700; ">Dr. Indrani Raman, MD</text><text x="52" y="38" fill="#0B213F80" style="font-family:'Inter',sans-serif; font-size:12px; font-weight:400; ">Physician &amp; Author</text></svg></figcaption></figure>
+   <figure class="tq"><blockquote>“I came in skeptical that a book could be written in 5 days. I left with a finished book, a funnel, and a launch plan. Everything I needed was in the room.”</blockquote><figcaption><svg role="img" width="250" height="58" viewBox="0 0 250 58" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="jarrodGradient" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#DC2626"></stop><stop offset="100%" stop-color="#F472B6"></stop></linearGradient></defs><circle cx="20" cy="20" r="20" fill="url(#jarrodGradient)"></circle><text x="20" y="20" fill="#FFFFFF" text-anchor="middle" dominant-baseline="central" style="font-family:'Inter',sans-serif; font-size:12px; font-weight:700; ">JC</text><text x="52" y="18" fill="#0B213F" style="font-family:'Inter',sans-serif; font-size:14px; font-weight:700; ">Dr. Jarrod Cooper</text><text x="52" y="38" fill="#0B213F80" style="font-family:'Inter',sans-serif; font-size:12px; font-weight:400; ">Chiropractor &amp; Author</text></svg></figcaption></figure>
+   <figure class="tq"><blockquote>“The positioning work alone was worth the tuition. I stopped being 'another coach' and became the author of the book on my topic. The phone rings differently now.”</blockquote><figcaption><svg role="img" width="220" height="58" viewBox="0 0 220 58" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="lisaGradient" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#4F46E5"></stop><stop offset="100%" stop-color="#7C3AED"></stop></linearGradient></defs><circle cx="20" cy="20" r="20" fill="url(#lisaGradient)"></circle><text x="20" y="20" fill="#FFFFFF" text-anchor="middle" dominant-baseline="central" style="font-family:'Inter',sans-serif; font-size:12px; font-weight:700; ">LL</text><text x="52" y="18" fill="#0B213F" style="font-family:'Inter',sans-serif; font-size:14px; font-weight:700; ">Lisa Lansing</text><text x="52" y="38" fill="#0B213F80" style="font-family:'Inter',sans-serif; font-size:12px; font-weight:400; ">Coach &amp; Author</text></svg></figcaption></figure>
+  </div>
+  <div class="rw cols w85 gap20 mt10">
+   <div class="ghost"></div>
+   <figure class="tq solo"><blockquote>“What Travis and Joy have built is a category of its own. Not a writing course. Not a marketing course. A complete author-to-authority system. My practice has never been busier.”</blockquote><figcaption><svg role="img" width="240" height="58" viewBox="0 0 240 58" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="ryanGradient" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#F86011"></stop><stop offset="100%" stop-color="#EC4899"></stop></linearGradient></defs><circle cx="20" cy="20" r="20" fill="url(#ryanGradient)"></circle><text x="20" y="20" fill="#FFFFFF" text-anchor="middle" dominant-baseline="central" style="font-family:'Inter',sans-serif; font-size:12px; font-weight:700; ">RF</text><text x="52" y="18" fill="#0B213F" style="font-family:'Inter',sans-serif; font-size:14px; font-weight:700; ">Dr. Ryan Ferns</text><text x="52" y="38" fill="#0B213F80" style="font-family:'Inter',sans-serif; font-size:12px; font-weight:400; ">Practitioner &amp; Author</text></svg></figcaption></figure>
+   <div class="ghost"></div>
+  </div>
+ </div>
+</section>
+<section class="sec bg-snow" id="deliverables" data-section="deliverables">
+ <div class="wrap">
+  <div class="rw">
+   <p class="eyebrow tc">WHAT YOU WALK AWAY WITH</p>
+   <h2 class="ptitle ink tc">In 5 days, you leave Las Vegas with:</h2>
+  </div>
+  <div class="rw cols w80 gap20">
+   <div class="cl pcard deliv"><span class="ico"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="72" height="72" viewBox="0 0 72 72" fill="none"><rect x="1" y="1" width="70" height="70" rx="18" fill="#1f9fe61a" stroke="rgba(31,159,230,0.18)" stroke-width="1.5"></rect><rect x="1" y="1" width="70" height="70" rx="18" fill="url(#targetGlow)"></rect><g transform="translate(24 24)" stroke="#1f9fe6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></g><defs><radialGradient id="targetGlow" cx="50%" cy="35%" r="70%"><stop offset="0%" stop-color="#1f9fe6" stop-opacity="0.18"></stop><stop offset="100%" stop-color="#1f9fe6" stop-opacity="0"></stop></radialGradient></defs></svg></span><h3>Your Core Concept locked in.</h3><p>Your book's strategic positioning, ideal reader profile, and money-making mission. Clear before you write a word.</p></div>
+   <div class="cl pcard deliv"><span class="ico"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="72" height="72" viewBox="0 0 72 72" fill="none"><rect x="1" y="1" width="70" height="70" rx="18" fill="#1f9fe61a" stroke="rgba(31,159,230,0.18)" stroke-width="1.5"></rect><rect x="1" y="1" width="70" height="70" rx="18" fill="url(#fileGlow)"></rect><g transform="translate(24 24)" stroke="#1f9fe6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"></path><path d="M14 2v4a2 2 0 0 0 2 2h4"></path><path d="M10 9H8"></path><path d="M16 13H8"></path><path d="M16 17H8"></path></g><defs><radialGradient id="fileGlow" cx="50%" cy="35%" r="70%"><stop offset="0%" stop-color="#1f9fe6" stop-opacity="0.18"></stop><stop offset="100%" stop-color="#1f9fe6" stop-opacity="0"></stop></radialGradient></defs></svg></span><h3>Your Core Concept locked in.</h3><p>Your book's strategic positioning, ideal reader profile, and money-making mission. Clear before you write a word.</p></div>
+   <div class="cl pcard deliv"><span class="ico"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="72" height="72" viewBox="0 0 72 72" fill="none"><rect x="1" y="1" width="70" height="70" rx="18" fill="#1f9fe61a" stroke="rgba(31,159,230,0.18)" stroke-width="1.5"></rect><rect x="1" y="1" width="70" height="70" rx="18" fill="url(#mapGlow)"></rect><g transform="translate(24 24)" stroke="#1f9fe6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"><path d="M14.106 5.553a2 2 0 0 0 1.788 0l3.659-1.83A1 1 0 0 1 21 4.619v12.764a1 1 0 0 1-.553.894l-4.553 2.277a2 2 0 0 1-1.788 0l-4.212-2.106a2 2 0 0 0-1.788 0l-3.659 1.83A1 1 0 0 1 3 19.381V6.618a1 1 0 0 1 .553-.894l4.553-2.277a2 2 0 0 1 1.788 0z"></path><path d="M15 5.764v15"></path><path d="M9 3.236v15"></path></g><defs><radialGradient id="mapGlow" cx="50%" cy="35%" r="70%"><stop offset="0%" stop-color="#1f9fe6" stop-opacity="0.18"></stop><stop offset="100%" stop-color="#1f9fe6" stop-opacity="0"></stop></radialGradient></defs></svg></span><h3>Your Core Concept locked in.</h3><p>Your book's strategic positioning, ideal reader profile, and money-making mission. Clear before you write a word.</p></div>
+  </div>
+  <div class="rw cols w80 gap20 mt20">
+   <div class="cl pcard deliv"><span class="ico"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="72" height="72" viewBox="0 0 72 72" fill="none"><rect x="1" y="1" width="70" height="70" rx="18" fill="#1f9fe61a" stroke="rgba(31,159,230,0.18)" stroke-width="1.5"></rect><rect x="1" y="1" width="70" height="70" rx="18" fill="url(#bookGlow)"></rect><g transform="translate(24 24)" stroke="#1f9fe6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"><path d="M12 7v14"></path><path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"></path></g><defs><radialGradient id="bookGlow" cx="50%" cy="35%" r="70%"><stop offset="0%" stop-color="#1f9fe6" stop-opacity="0.18"></stop><stop offset="100%" stop-color="#1f9fe6" stop-opacity="0"></stop></radialGradient></defs></svg></span><h3>Your book written.</h3><p>Preface, introduction, all chapters, and conclusion. Plus front matter and back matter. Written by you, with AI-enhanced writing stacks and real-time coaching.</p></div>
+   <div class="cl pcard deliv"><span class="ico"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="72" height="72" viewBox="0 0 72 72" fill="none"><rect x="1" y="1" width="70" height="70" rx="18" fill="#1f9fe61a" stroke="rgba(31,159,230,0.18)" stroke-width="1.5"></rect><rect x="1" y="1" width="70" height="70" rx="18" fill="url(#penGlow)"></rect><g transform="translate(24 24)" stroke="#1f9fe6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"><path d="M12 20h9"></path><path d="M16.376 3.622a1 1 0 0 1 3.002 3.002L7.368 18.635a2 2 0 0 1-.855.506l-2.872.838a.5.5 0 0 1-.62-.62l.838-2.872a2 2 0 0 1 .506-.854z"></path></g><defs><radialGradient id="penGlow" cx="50%" cy="35%" r="70%"><stop offset="0%" stop-color="#1f9fe6" stop-opacity="0.18"></stop><stop offset="100%" stop-color="#1f9fe6" stop-opacity="0"></stop></radialGradient></defs></svg></span><h3>An Implementation Workbook.</h3><p>A companion workbook that helps readers apply what they are learning. This moves readers into email list members where conversions happen.</p></div>
+   <div class="cl pcard deliv"><span class="ico"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="72" height="72" viewBox="0 0 72 72" fill="none"><rect x="1" y="1" width="70" height="70" rx="18" fill="#1f9fe61a" stroke="rgba(31,159,230,0.18)" stroke-width="1.5"></rect><rect x="1" y="1" width="70" height="70" rx="18" fill="url(#bookCheckGlow)"></rect><g transform="translate(24 24)" stroke="#1f9fe6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H19a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H6.5a1 1 0 0 1 0-5H20"></path><path d="m9 9.5 2 2 4-4"></path></g><defs><radialGradient id="bookCheckGlow" cx="50%" cy="35%" r="70%"><stop offset="0%" stop-color="#1f9fe6" stop-opacity="0.18"></stop><stop offset="100%" stop-color="#1f9fe6" stop-opacity="0"></stop></radialGradient></defs></svg></span><h3>ISBN numbers and publication setup.</h3><p>Your book loaded into publishing software, ready for paperback, hardcover, and ebook formats.</p></div>
+  </div>
+  <div class="rw cols w80 gap20 mt20">
+   <div class="cl pcard deliv"><span class="ico"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="72" height="72" viewBox="0 0 72 72" fill="none"><rect x="1" y="1" width="70" height="70" rx="18" fill="#1f9fe61a" stroke="rgba(31,159,230,0.18)" stroke-width="1.5"></rect><rect x="1" y="1" width="70" height="70" rx="18" fill="url(#imageGlow)"></rect><g transform="translate(24 24)" stroke="#1f9fe6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"></rect><circle cx="9" cy="9" r="2"></circle><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"></path></g><defs><radialGradient id="imageGlow" cx="50%" cy="35%" r="70%"><stop offset="0%" stop-color="#1f9fe6" stop-opacity="0.18"></stop><stop offset="100%" stop-color="#1f9fe6" stop-opacity="0"></stop></radialGradient></defs></svg></span><h3>Cover design briefs for all formats.</h3><p>Everything your designer needs for hardback, paperback, ebook, and audiobook covers.</p></div>
+   <div class="cl pcard deliv"><span class="ico"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="72" height="72" viewBox="0 0 72 72" fill="none"><rect x="1" y="1" width="70" height="70" rx="18" fill="#1f9fe61a" stroke="rgba(31,159,230,0.18)" stroke-width="1.5"></rect><rect x="1" y="1" width="70" height="70" rx="18" fill="url(#layersGlow)"></rect><g transform="translate(26 26) scale(0.83)" stroke="#1f9fe6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"><path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"></path><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"></path><path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"></path></g><defs><radialGradient id="layersGlow" cx="50%" cy="35%" r="70%"><stop offset="0%" stop-color="#1f9fe6" stop-opacity="0.18"></stop><stop offset="100%" stop-color="#1f9fe6" stop-opacity="0"></stop></radialGradient></defs></svg></span><h3>Your book funnel blueprint.</h3><p>The self-liquidating offer architecture mapped with your specific numbers: ad spend, conversion targets, order bumps, upsells, and backend path.</p></div>
+   <div class="cl pcard deliv"><span class="ico"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="72" height="72" viewBox="0 0 72 72" fill="none"><rect x="1" y="1" width="70" height="70" rx="18" fill="#1f9fe61a" stroke="rgba(31,159,230,0.18)" stroke-width="1.5"></rect><rect x="1" y="1" width="70" height="70" rx="18" fill="url(#trendGlow)"></rect><g transform="translate(26 26) scale(0.83)" stroke="#1f9fe6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline><polyline points="16 7 22 7 22 13"></polyline></g><defs><radialGradient id="trendGlow" cx="50%" cy="35%" r="70%"><stop offset="0%" stop-color="#1f9fe6" stop-opacity="0.18"></stop><stop offset="100%" stop-color="#1f9fe6" stop-opacity="0"></stop></radialGradient></defs></svg></span><h3>A comprehensive marketing plan.</h3><p>Your personalized launch strategy built around your favorite platforms, your audience, and the funnel math that makes it work.</p></div>
+  </div>
+  <div class="rw"><div class="cta-block"><a class="pbtn btn-cta" href="#order"><span class="ktext">RESERVE YOUR SEAT →</span></a></div></div>
+ </div>
+</section>
+<section class="sec bg-navy deep" id="schedule" data-section="schedule">
+ <div class="wrap">
+  <div class="rw w70">
+   <div class="rw w80">
+    <p class="eyebrow">WHAT YOU WALK AWAY WITH</p>
+    <h2 class="ptitle on-dark">5 Days. 1 Book. A Complete System to Turn Readers Into Clients.</h2>
+    <p class="tx fx soft">Every day has a clear theme, a tangible deliverable, and a reason it matters to your business.</p>
+   </div>
+   <div class="rw"><div class="timeline">
+    <div class="tl-item">
+     <div class="tl-label">Prep Session</div>
+     <div class="tl-date">Date TBD. Before the Event</div>
+     <h3>Strategic Positioning + Monetization Alignment</h3>
+     <div class="tl-sub">Before You Arrive</div>
+     <p class="tl-body">Before Day 1, you get a mandatory 1:1 strategy call with Joy. We refine your core book concept, align your messaging, and make sure your Content Construct has backend monetization baked in. This is non-negotiable. You walk into the room on Day 1 with confidence, clarity, and a roadmap.</p>
+     <div class="takeaway"><span>Takeaway</span><p>You are strategically dialed in before the event starts.</p></div>
+    </div>
+    <div class="tl-item">
+     <div class="tl-label">Welcome Reception</div>
+     <div class="tl-date">Sunday, March 21, 2027 (5:00 PM to 7:00 PM PT)</div>
+     <h3>Arrival &amp; Orientation</h3>
+     <div class="tl-sub">In the Suite</div>
+     <p class="tl-body">Kick off your week with wine, light fare, connection, and a preview of what is ahead. Meet your fellow participants and the B2B team. Get oriented on the week's agenda and set your intentions for the 5 days ahead.</p>
+     <div class="takeaway"><span>Takeaway</span><p>You arrive informed, connected, and ready to hit the ground running on Day 1.</p></div>
+    </div>
+    <div class="tl-item">
+     <div class="tl-label">Day 1</div>
+     <div class="tl-date">Monday, March 22, 2027</div>
+     <h3>Concept to an Outline for Outcomes</h3>
+     <div class="tl-sub">Strategic Positioning + Funnel-Infused Book Blueprint</div>
+     <p class="tl-body">Lock in your money-making mission. This is about revenue, not just writing. Turn your Content Construct into a Cash Flow Construct. Build your Outline for Outcomes so every chapter ends with a waterslide into your funnel. Confirm your reader journey mirrors your client acquisition system.</p>
+     <div class="takeaway"><span>Takeaway</span><p>A comprehensive outline that anchors your book to your business model. This is the moment the roller coaster locks in. You will know exactly what every chapter covers, where it leads, and why it matters.</p></div>
+    </div>
+    <div class="tl-item">
+     <div class="tl-label">Day 2</div>
+     <div class="tl-date">Tuesday, March 23, 2027</div>
+     <h3>Chapter Development Intensive: Part I</h3>
+     <div class="tl-sub">Writing a Book That Sells</div>
+     <p class="tl-body">Flesh out your core chapters with substance and heart. Our AI-powered process guides you to deliver TED Talk-style descriptions of each step in your process, then address each topic from multiple angles so every reader personality connects with your content. You are not staring at a blank page. You are answering guided prompts that pull your expertise out of your head and onto the page.</p>
+     <div class="takeaway"><span>Takeaway</span><p>A solid working draft of your first half of conversion-ready chapters. Your expert brand is taking shape in written form.</p></div>
+    </div>
+    <div class="tl-item">
+     <div class="tl-label">Day 3</div>
+     <div class="tl-date">Wednesday, March 24, 2027</div>
+     <h3>Chapter Development Intensive: Part II</h3>
+     <div class="tl-sub">Completing Your Manuscript</div>
+     <p class="tl-body">Continue building out your remaining chapters using the same AI-powered guided process. Deepen your case studies, sharpen your belief-shift sequences, and ensure every chapter is doing a specific job in your buyer conversion arc. By end of day, your full manuscript draft is complete.</p>
+     <div class="takeaway"><span>Takeaway</span><p>A complete working manuscript draft. Every chapter written, every belief shift mapped, every reader touchpoint accounted for.</p></div>
+    </div>
+    <div class="tl-item">
+     <div class="tl-label">Day 4</div>
+     <div class="tl-date">Thursday, March 25, 2027</div>
+     <h3>Conversion Infrastructure + Sales Strategy</h3>
+     <div class="tl-sub">Implementation That Moves Readers to Action</div>
+     <p class="tl-body">Create your Implementation Workbook: a powerful companion resource extracted from the book content you created the day before. This is what keeps your book from being shelf-help. It gives readers a clear path to actually apply what they learned. Strategize your front matter and back matter to capture leads and drive next steps.</p>
+     <div class="takeaway"><span>Takeaway</span><p>An implementation workbook that turns readers into implementers. Your book becomes something they use, apply, and act on.</p></div>
+    </div>
+    <div class="tl-item">
+     <div class="tl-label">Day 5</div>
+     <div class="tl-date">Friday, March 26, 2027 (9:00 AM to 4:00 PM PT)</div>
+     <h3>Publishing + Profit Systems</h3>
+     <div class="tl-sub">Production, Platforming, and Revenue</div>
+     <p class="tl-body">Format your book for paperback, hardcover, and ebook. Nail your publishing setup: ISBNs, category strategy, keyword optimization, conversion copy for your Amazon listing. Map your Self-Liquidating Funnel Strategy so the book funds its own ad spend. Bonus: Kindle Unlimited promo strategy and review harvesting.</p>
+     <div class="takeaway"><span>Takeaway</span><p>A fully packaged, self-published profit engine. Ready to go live and start capturing leads and driving revenue.</p></div>
+    </div>
+   </div></div>
+  </div>
+  <div class="rw w70 mt10"><p class="bigq mt0">Picture this. It is March 27. You are walking out of the ARIA with a finished manuscript in your hands. A funnel blueprint on your laptop. You spent 5 days doing the work you have been putting off for years. And it is done.</p></div>
+  <div class="rw pb70 rule-glow"><div class="cta-block"><a class="pbtn btn-cta" href="#order"><span class="ktext">RESERVE YOUR SEAT →</span></a></div></div>
+ </div>
+</section>
+<section class="sec pad40 bg-snow" data-section="graduates">
+ <div class="wrap">
+  <div class="rw w80">
+   <div class="rw w80">
+    <p class="eyebrow">SOCIAL PROOF</p>
+    <h2 class="ptitle">What Our Recent Graduates Are Saying</h2>
+   </div>
+   <div class="rw cols gap20 mt20">
+    <figure class="cl pcard grad"><figcaption class="grad-who"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="23.5" fill="#1f9fe61a" stroke="#1f9fe64d" stroke-width="1"></circle><text x="24" y="24" text-anchor="middle" dominant-baseline="middle" font-family="'Space Grotesk', sans-serif" font-size="14" font-weight="700" fill="#1f9fe6">EB</text></svg><div><b>Eric Berman</b><small>Brian Tracy's 25-Year Business Partner</small></div></figcaption><blockquote>"Just came out of a 1 week intensive book writing workshop. And I am now weeks away from launching my first published book. What blows me away most is not just getting it done in 5 intense days (plus pre and post work). It is the process. Blending next level AI prompting with smart positioning and marketing strategy made what normally takes months or even years happen in a week, without sacrificing quality. This experience completely shifted how I think about leverage and speed in today's world. When used correctly, AI does not replace expertise. It amplifies it."</blockquote></figure>
+    <figure class="cl pcard grad"><figcaption class="grad-who"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="23.5" fill="#1f9fe61a" stroke="#1f9fe64d" stroke-width="1"></circle><text x="24" y="24" text-anchor="middle" dominant-baseline="middle" font-family="'Space Grotesk', sans-serif" font-size="14" font-weight="700" fill="#1f9fe6">AB</text></svg><div><b>Dr. Amber Bocknek</b></div></figcaption><blockquote>"This was not just about writing a book. It was about finding my voice and trusting it. Joy's Book To Buyer process has a way of turning what feels overwhelming into something clear, structured, and deeply aligned. In just a few days, I went from ideas in my head to real clarity, confidence, and forward momentum."</blockquote></figure>
+    <figure class="cl pcard grad"><figcaption class="grad-who"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="23.5" fill="#1f9fe61a" stroke="#1f9fe64d" stroke-width="1"></circle><text x="24" y="24" text-anchor="middle" dominant-baseline="middle" font-family="'Space Grotesk', sans-serif" font-size="14" font-weight="700" fill="#1f9fe6">KW</text></svg><div><b>Dr. Kacey Wallace</b></div></figcaption><blockquote>"I just spent 5 days writing my book, and I can honestly say it was one of the most impactful experiences I have ever had. I went in with ideas, thoughts, and processes that had been living in my head for a long time. But in a very short period of time, I was able to get it all out and bring it to life in a way I did not think was possible."</blockquote></figure>
+   </div>
+   <div class="rw cols gap20 mt20">
+    <figure class="cl pcard grad"><figcaption class="grad-who"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="23.5" fill="#1f9fe61a" stroke="#1f9fe64d" stroke-width="1"></circle><text x="24" y="24" text-anchor="middle" dominant-baseline="middle" font-family="'Space Grotesk', sans-serif" font-size="14" font-weight="700" fill="#1f9fe6">IR</text></svg><div><b class="gap">Dr. Indrani Raman, MD</b></div></figcaption><blockquote>"The Book to Buyer program was one of the best decisions I made this year. Joy, Travis, and Coach Lisa were with me every step of the way. My book on Menopause is close to being self-published, and I know it is going to help educate millions of women going through this phase of life."</blockquote></figure>
+    <figure class="cl pcard grad"><figcaption class="grad-who"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="23.5" fill="#1f9fe61a" stroke="#1f9fe64d" stroke-width="1"></circle><text x="24" y="24" text-anchor="middle" dominant-baseline="middle" font-family="'Space Grotesk', sans-serif" font-size="14" font-weight="700" fill="#1f9fe6">RF</text></svg><div><b>Dr. Ryan Ferns</b></div></figcaption><blockquote>"Thank you Joy, Travis, and Lisa for an incredible experience. You absolutely killed it. It was such a pleasure meeting everyone this week and being surrounded by so many impressive and wonderful people."</blockquote></figure>
+    <figure class="cl pcard grad"><figcaption class="grad-who"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="23.5" fill="#1f9fe61a" stroke="#1f9fe64d" stroke-width="1"></circle><text x="24" y="24" text-anchor="middle" dominant-baseline="middle" font-family="'Space Grotesk', sans-serif" font-size="14" font-weight="700" fill="#1f9fe6">JC</text></svg><div><b>Dr. Jarrod Cooper</b></div></figcaption><blockquote>"Thanks Travis, Joy, and Lisa for an amazing week. The support offered was brilliant and the way you guys ran and executed the whole week was spot on. Really appreciated all the extras and the vibe you guys created."</blockquote></figure>
+   </div>
+   <div class="rw cols gap20 mt20">
+    <figure class="cl pcard grad"><figcaption class="grad-who"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="23.5" fill="#1f9fe61a" stroke="#1f9fe64d" stroke-width="1"></circle><text x="24" y="24" text-anchor="middle" dominant-baseline="middle" font-family="'Space Grotesk', sans-serif" font-size="14" font-weight="700" fill="#1f9fe6">LL</text></svg><div><b>Lisa Lansing</b><small>Wellness Expert</small></div></figcaption><blockquote>"It was truly magical to meet all of you. The work we are creating is so powerful, and I can feel how it is going to make a real difference in the world."</blockquote></figure>
+    <div class="ghost"></div>
+    <div class="ghost"></div>
+   </div>
+  </div>
+  <div class="rw mt20"><div class="cta-block"><a class="pbtn btn-cta" href="#order"><span class="ktext">RESERVE YOUR SEAT →</span></a></div></div>
+ </div>
+</section>
+<section class="sec bg-white" id="experience" data-section="experience">
+ <div class="wrap"><div class="rw w80">
+  <div class="rw w80">
+   <p class="eyebrow">THE EXPERIENCE</p>
+   <h2 class="ptitle">5 Days in Las Vegas. Your Book. Your Business. Your Breakthrough.</h2>
+   <p class="tx fx ink">Every detail of this experience is designed to remove friction and maximize focus. You are not here to sit in a ballroom. You are here to build something real.</p>
+  </div>
+  <div class="rw w80"><div class="venues">
+   <figure class="venue"><img src="https://assets.cdn.filesafe.space/Pf5iT5paoZ66Db8XqwBy/media/6a27cb03fc95b24549d5126c.webp" alt="ARIA Resort &amp; Casino" width="1900" height="1266" loading="lazy"><figcaption>ARIA Resort &amp; Casino</figcaption></figure>
+   <figure class="venue"><img src="https://assets.cdn.filesafe.space/Pf5iT5paoZ66Db8XqwBy/media/6a27f8a02f56d3ac845dc4ee.jpg" alt="Your Seat At The Table" width="2268" height="4032" loading="lazy"><figcaption>Your Seat at the Table</figcaption></figure>
+   <figure class="venue"><img src="https://assets.cdn.filesafe.space/Pf5iT5paoZ66Db8XqwBy/media/6a27cb03f607d4002bdfb951.webp" alt="Private Suite Skyline View" width="2000" height="1167" loading="lazy"><figcaption>Private Suite: Skyline View</figcaption></figure>
+   <figure class="venue"><img src="https://assets.cdn.filesafe.space/Pf5iT5paoZ66Db8XqwBy/media/6a27f8a0bd661f13c1fb205e.webp" alt="Executive Suite Living Space" width="1440" height="808" loading="lazy"><figcaption>Executive Suite Living Space</figcaption></figure>
+  </div></div>
+  <div class="rw cols w90 gap30 mt20">
+   <div class="cl pcard logi"><div class="logi-head"><span><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 72 72" fill="none"><rect x="1" y="1" width="70" height="70" rx="18" fill="#1f9fe61a" stroke="rgba(31,159,230,0.18)" stroke-width="1.5"></rect><rect x="1" y="1" width="70" height="70" rx="18" fill="url(#mapPinGlow)"></rect><g transform="translate(26 26) scale(0.83)" stroke="#1f9fe6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></g><defs><radialGradient id="mapPinGlow" cx="50%" cy="35%" r="70%"><stop offset="0%" stop-color="#1f9fe6" stop-opacity="0.18"></stop><stop offset="100%" stop-color="#1f9fe6" stop-opacity="0"></stop></radialGradient></defs></svg></span><b>Location</b></div><p>ARIA Resort and Casino, Las Vegas, Nevada. All sessions take place in ARIA's private Hospitality Suite: a 12-person boardroom and executive workspace. Modern. Luxe. No ballroom. No folding chairs.</p></div>
+   <div class="cl pcard logi"><div class="logi-head"><span><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 72 72" fill="none"><rect x="1" y="1" width="70" height="70" rx="18" fill="#1f9fe61a" stroke="rgba(31,159,230,0.18)" stroke-width="1.5"></rect><rect x="1" y="1" width="70" height="70" rx="18" fill="url(#calendarGlow)"></rect><g transform="translate(26 26) scale(0.83)" stroke="#1f9fe6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"><path d="M8 2v4"></path><path d="M16 2v4"></path><rect width="18" height="18" x="3" y="4" rx="2"></rect><path d="M3 10h18"></path></g><defs><radialGradient id="calendarGlow" cx="50%" cy="35%" r="70%"><stop offset="0%" stop-color="#1f9fe6" stop-opacity="0.18"></stop><stop offset="100%" stop-color="#1f9fe6" stop-opacity="0"></stop></radialGradient></defs></svg></span><b>Dates</b></div><p>March 21 - 26, 2027. Recommended arrival: Saturday, March 20 (or arrive by early afternoon Sunday, March 21 to make the Welcome Reception). Welcome Reception: Sunday, March 21, 5:00 PM to 7:00 PM. The 5-day intensive runs Monday March 22 through Friday March 26 (9:00 AM to 4:00 PM on Day 5). Celebration Dinner + Party: Friday March 26, 6:00 PM to 11:00 PM. Recommended departure: Saturday, March 27.</p></div>
+  </div>
+  <div class="rw cols w90 gap30 mt20">
+   <div class="cl pcard logi"><div class="logi-head"><span><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 72 72" fill="none"><rect x="1" y="1" width="70" height="70" rx="18" fill="#1f9fe61a" stroke="rgba(31,159,230,0.18)" stroke-width="1.5"></rect><rect x="1" y="1" width="70" height="70" rx="18" fill="url(#clockGlow)"></rect><g transform="translate(26 26) scale(0.83)" stroke="#1f9fe6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></g><defs><radialGradient id="clockGlow" cx="50%" cy="35%" r="70%"><stop offset="0%" stop-color="#1f9fe6" stop-opacity="0.18"></stop><stop offset="100%" stop-color="#1f9fe6" stop-opacity="0"></stop></radialGradient></defs></svg></span><b>Daily Schedule</b></div><p>9:00 AM to 5:00 PM daily sessions. Catered lunches, snacks, and refreshments included. Evenings are open for creative focus, networking, or a cocktail under the neon sky.</p></div>
+   <div class="cl pcard logi"><div class="logi-head"><span><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 72 72" fill="none"><rect x="1" y="1" width="70" height="70" rx="18" fill="#1f9fe61a" stroke="rgba(31,159,230,0.18)" stroke-width="1.5"></rect><rect x="1" y="1" width="70" height="70" rx="18" fill="url(#usersGlow)"></rect><g transform="translate(26 26) scale(0.83)" stroke="#1f9fe6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></g><defs><radialGradient id="usersGlow" cx="50%" cy="35%" r="70%"><stop offset="0%" stop-color="#1f9fe6" stop-opacity="0.18"></stop><stop offset="100%" stop-color="#1f9fe6" stop-opacity="0"></stop></radialGradient></defs></svg></span><b>Capacity</b></div><p>12 seats total. This is intentional. Everyone gets hands-on support. Everyone gets direct access to Joy and the team. This is not a conference. It is a working room.</p></div>
+  </div>
+ </div></div>
+</section>
+<section class="sec bg-navy deep" data-section="bonuses">
+ <div class="wrap">
+  <div class="rw w70"><h2 class="ptitle on-dark mt0">Bonus Experiences</h2></div>
+  <div class="rw cols w70"><div class="cl bonus first"><h3><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M8 22h8"></path><path d="M7 10h10"></path><path d="M12 15v7"></path><path d="M12 15a5 5 0 0 0 5-5c0-2-.5-4-2-8H9c-1.5 4-2 6-2 8a5 5 0 0 0 5 5Z"></path></svg><span>Sunday Welcome Reception (March 21)</span></h3><p>Kick off your week with wine, light fare, connection, and a preview of what is ahead. 5:00 to 7:00 PM.</p></div></div>
+  <div class="rw cols w70 mt20"><div class="cl bonus"><h3><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M8 22h8"></path><path d="M7 10h10"></path><path d="M12 15v7"></path><path d="M12 15a5 5 0 0 0 5-5c0-2-.5-4-2-8H9c-1.5 4-2 6-2 8a5 5 0 0 0 5 5Z"></path></svg><span>Friday Celebration Dinner + Party (March 26)</span></h3><p>You wrote it. You built it. You are ready to launch it. Now we celebrate. 6:00 to 11:00 PM.</p></div></div>
+  <div class="rw cols w70 mt20"><div class="cl bonus"><h3><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"></path><circle cx="12" cy="13" r="3"></circle></svg><span>Professional Head Shots</span></h3><p>Expert onsite photography for your book cover and brand. Look the part because you are the part.</p></div></div>
+  <div class="rw cols w70 mt20"><div class="cl bonus"><h3><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path><rect width="20" height="14" x="2" y="6" rx="2"></rect></svg><span>Delegation by Design Training</span></h3><p>Follow-up training on how to land a world-class virtual assistant for next to nothing.</p></div></div>
+  <div class="rw cols w70 mt20"><div class="cl bonus tip"><div class="eyebrow keep">PRO TIP</div><p>Stay at the ARIA. No commutes. No confusion. Full immersion.</p></div></div>
+ </div>
+</section>
+<section class="sec bg-white" data-section="team">
+ <div class="wrap"><div class="rw cols w80">
+  <div class="team-photo"><div class="portrait"><img src="https://assets.cdn.filesafe.space/Pf5iT5paoZ66Db8XqwBy/media/6a2800287fc0b68efc4a9382.jpg" alt="Joy and Travis Houston" width="700" height="467" loading="lazy"></div></div>
+  <div class="team-copy"><div>
+   <p class="eyebrow">YOUR TEAM</p>
+   <h2 class="ptitle">The Team Behind Book To Buyer</h2>
+   <div class="tx fx ink loose">
+    <p>Joy and Travis Houston built the book launch systems behind some of the biggest names in publishing. Four New York Times bestsellers in two and a half years for clients including <strong>Amy Myers MD, Dr. Daniel Amen, Metagenics Institute, JJ Virgin, Dr. Sara Gottfried,</strong> and <strong>John Assaraf</strong> to name a few. They have been behind the scenes with the 800-pound gorillas of the industry for over a decade.</p>
+    <p>Now they are bringing that same system to experts, business owners, and service professionals who are ready to do the work.</p>
+   </div>
+  </div></div>
+ </div></div>
+</section>
+<section class="sec bg-navy pricing" id="order" data-section="offer">
+ <div class="wrap"><div class="rw w80 pb70 rule-glow">
+  <p class="eyebrow">THE EXPERIENCE</p>
+  <h2 class="ptitle on-dark">Choose Your Path</h2>
+  <p class="tx fx soft">Book To Buyer LIVE includes everything listed above: 5 days of done-with-you book creation. 1:1 prep session with Joy. Lifetime portal access. AI-powered frameworks. Professional head shots. Complete funnel architecture. Your full marketing plan and launch assets.</p>
+  <p class="serif-note">Spots are limited to 12. When they are gone, they are gone.</p>
+  <div class="plans">
+   <div class="plan featured">
+    <div class="plan-band">Best Value: Save $1,500</div>
+    <p class="plan-price">$15,000</p>
+    <p class="plan-label">USD, one-time payment</p>
+    <div class="cta-block"><a class="pbtn btn-cta" href="https://maptomillions.com/book-to-buyer-enroll-1p" target="_blank" rel="noopener"><span class="ktext">ADD TO CART →</span></a></div>
+    <ul class="marks yes">
+     <li>Immediate portal access</li>
+     <li>1:1 strategy call with Joy</li>
+     <li>Priority seat selection</li>
+    </ul>
+   </div>
+   <div class="plan">
+    <p class="plan-price">3 x $5,500</p>
+    <p class="plan-label">USD, split over 3 months</p>
+    <div class="cta-block"><a class="pbtn btn-cta" href="https://maptomillions.com/book-to-buyer-enroll-3p" target="_blank" rel="noopener"><span class="ktext">ADD TO CART →</span></a></div>
+    <ul class="marks yes">
+     <li>First payment due at enrollment</li>
+     <li>Portal access after first payment</li>
+     <li>Same full experience</li>
+    </ul>
+   </div>
+  </div>
+  <p class="after-plans">Once you enroll, we schedule your 1:1 prep session with Joy and get you ready for the best 5 days of your business life.</p>
+ </div></div>
+</section>
+<section class="sec bg-snow" data-section="note">
+ <div class="wrap"><div class="rw w70">
+  <p class="eyebrow">THE EXPERIENCE</p>
+  <h2 class="ptitle mt10">A Note From Joy</h2>
+  <div class="tx fx ink loose mt20">
+   <p>If you have made it this far, you already know three things. You have something worth saying. You have been putting it off. And you know that sharing it with the world would radically change the profitability of your business. Every day you wait is money left on the table.</p>
+   <p>I get it. Writing a book sounds enormous. And honestly? It is hard. I am not going to sugarcoat that. There will be moments during our 5 days together where you want to cry in the shower. Where you question whether your ideas are good enough. Where cutting your book to the bone feels painful.</p>
+   <p><strong>That is normal. And that is exactly why you do not do this alone.</strong></p>
+   <p>Here is what I need you to hear: if you are going to do the soul-squeezing work of getting a book out of you, please make sure there is juice in that squeeze. Do not write a book that just sits there. Write a book that opens doors. That fills your coffers. That works for you while you sleep.</p>
+  </div>
+  <p class="punch sm loose">That is what we build at Book To Buyer LIVE. Not a passion project. A platform.</p>
+  <p class="tx fx ink loose mt20">Your expertise deserves to reach beyond your current client list. Your future readers are waiting. And I would be honored to help you get there.</p>
+  <p class="serif-note loose mt20">Let's do this together.</p>
+  <div class="hr"><i></i></div>
+  <p class="punch sm sig-name">Joy Houston</p>
+  <p class="sig-line">"Your Cheerleader Drill Sergeant"</p>
+  <p class="eyebrow xs plain">CEO, Heal At Scale</p>
+ </div></div>
+</section>
+<section class="sec bg-white s-faq" id="faq" data-section="faq">
+ <div class="wrap"><div class="rw w70 mt20">
+  <p class="eyebrow">FAQ</p>
+  <h2 class="ptitle mt10 mb40">Frequently Asked Questions</h2>
+  <div class="faq-card">
+   <details><summary><h3>Do I need to have my book idea figured out before attending?</h3><span class="tog"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="8" fill="currentColor"/><path d="M4.4 8h7.2" fill="none" stroke="#fff" stroke-width="1.9"/><path class="v" d="M8 4.4v7.2" fill="none" stroke="#fff" stroke-width="1.9"/></svg></span></summary><div class="a"><div class="a-in"><p>No. The Prep Session and Day 1 are specifically designed to lock in your Core Concept, ideal reader, and money-making mission before you write a single chapter. You will arrive with raw expertise and leave with a fully positioned book strategy.</p></div></div></details>
+   <details><summary><h3>What if I have already started writing my book?</h3><span class="tog"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="8" fill="currentColor"/><path d="M4.4 8h7.2" fill="none" stroke="#fff" stroke-width="1.9"/><path class="v" d="M8 4.4v7.2" fill="none" stroke="#fff" stroke-width="1.9"/></svg></span></summary><div class="a"><div class="a-in"><p>Bring what you have. Most experts who arrive with drafts realize during Day 1 that their structure was the bottleneck the whole time. You may rewrite, restructure, or use existing material as raw input. The C.O.R.E. process tightens whatever you bring.</p></div></div></details>
+   <details><summary><h3>What if I am not a good writer?</h3><span class="tog"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="8" fill="currentColor"/><path d="M4.4 8h7.2" fill="none" stroke="#fff" stroke-width="1.9"/><path class="v" d="M8 4.4v7.2" fill="none" stroke="#fff" stroke-width="1.9"/></svg></span></summary><div class="a"><div class="a-in"><p>Our AI-powered process is built for non-writers. You speak. The system writes. Day 2 and Day 3 use guided prompts that pull your expertise out of your head and onto the page. Eric Berman called this "next level AI prompting." You do not need to be a writer. You need to be an expert.</p></div></div></details>
+   <details><summary><h3>Can I really write an entire book in 5 days?</h3><span class="tog"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="8" fill="currentColor"/><path d="M4.4 8h7.2" fill="none" stroke="#fff" stroke-width="1.9"/><path class="v" d="M8 4.4v7.2" fill="none" stroke="#fff" stroke-width="1.9"/></svg></span></summary><div class="a"><div class="a-in"><p>Yes. Every B2B graduate who followed the process completed their book in 5 days. The Prep Session locks the strategy. Days 1-3 build the outline and write the manuscript. Day 4 builds the workbook and conversion infrastructure. Day 5 publishes. By Friday night you have a finished, formatted, publication-ready book.</p></div></div></details>
+   <details><summary><h3>What if I do not have a big audience or email list yet?</h3><span class="tog"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="8" fill="currentColor"/><path d="M4.4 8h7.2" fill="none" stroke="#fff" stroke-width="1.9"/><path class="v" d="M8 4.4v7.2" fill="none" stroke="#fff" stroke-width="1.9"/></svg></span></summary><div class="a"><div class="a-in"><p>Most attendees do not. Book To Buyer is designed to BUILD your list, not require one. Your book becomes the front of the funnel. The workbook captures emails. The funnel architecture turns readers into clients. You leave with the system to grow your list, not a requirement to have one.</p></div></div></details>
+   <details><summary><h3>Is travel, hotel, and food included in the price?</h3><span class="tog"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="8" fill="currentColor"/><path d="M4.4 8h7.2" fill="none" stroke="#fff" stroke-width="1.9"/><path class="v" d="M8 4.4v7.2" fill="none" stroke="#fff" stroke-width="1.9"/></svg></span></summary><div class="a"><div class="a-in"><p>Catered lunches, snacks, refreshments, the Welcome Reception, and the Celebration Dinner are included. Travel to Las Vegas and your hotel stay are not. We strongly recommend staying at the ARIA for full immersion. Hotel booking instructions provided on enrollment.</p></div></div></details>
+   <details><summary><h3>What if something comes up and I cannot attend?</h3><span class="tog"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="8" fill="currentColor"/><path d="M4.4 8h7.2" fill="none" stroke="#fff" stroke-width="1.9"/><path class="v" d="M8 4.4v7.2" fill="none" stroke="#fff" stroke-width="1.9"/></svg></span></summary><div class="a"><div class="a-in"><p>Once you enroll, your seat is locked and the team begins your prep work. Because of the small group size and the work that goes into your strategy before the event, we do not offer refunds. If a true emergency arises, we will work with you to transfer your seat to a future cohort.</p></div></div></details>
+   <details><summary><h3>What if I am not comfortable with AI?</h3><span class="tog"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="8" fill="currentColor"/><path d="M4.4 8h7.2" fill="none" stroke="#fff" stroke-width="1.9"/><path class="v" d="M8 4.4v7.2" fill="none" stroke="#fff" stroke-width="1.9"/></svg></span></summary><div class="a"><div class="a-in"><p>You do not need to be. The AI process is woven into the workshop and guided live. By Day 2 you will be fluent in the exact prompts and workflows we use. We meet you wherever you are and walk you through it step by step.</p></div></div></details>
+   <details><summary><h3>What if I have more questions?</h3><span class="tog"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="8" fill="currentColor"/><path d="M4.4 8h7.2" fill="none" stroke="#fff" stroke-width="1.9"/><path class="v" d="M8 4.4v7.2" fill="none" stroke="#fff" stroke-width="1.9"/></svg></span></summary><div class="a"><div class="a-in"><p>Email Joy directly at joy@healatscale.com. She reads and responds personally. If you are on the fence, that is the fastest way to get clarity.</p></div></div></details>
+  </div>
+ </div></div>
+</section>
+<section class="sec bg-navy deep glow" data-section="close">
+ <div class="wrap">
+  <div class="rw w70">
+   <h2 class="ptitle on-dark mt10 mb40">Two Paths. Same Expertise. Different Outcomes.</h2>
+   <div class="rw cols gap20 mt20">
+    <div class="cl glass path"><div class="path-tag"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="14" y="4" width="4" height="16" rx="1"></rect><rect x="6" y="4" width="4" height="16" rx="1"></rect></svg><span>Path A: Wait</span></div><p>Still "thinking about" writing that book. Still watching colleagues get the podcast invites, the speaking gigs, the premium clients.</p></div>
+    <div class="cl glass path build"><div class="path-tag"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"></path></svg><span>Path B: Build</span></div><p>Published author. Funnel live. Clients finding you through your book. Your expertise working for you 24/7.</p></div>
+   </div>
+   <p class="tx fx soft tc mt20">90 days from now, while other experts are still "thinking about it," you could be the one with the published book, the funnel, and the clients who found you because they read your work and trusted your expertise.</p>
+   <p class="where">12 seats. March 21 - 26, 2027. ARIA Resort, Las Vegas.</p>
+   <div class="cta-block"><a class="pbtn btn-cta" href="#order"><span class="ktext">RESERVE YOUR SEAT →</span></a></div>
+   <p class="tx fx sm soft tc mt20 ask">Questions? Email <a href="mailto:joy@healatscale.com">joy@healatscale.com</a></p>
+  </div>
+  <div class="rw w70 tail"></div>
+ </div>
+</section>
+</main>
+<div class="sticky" id="sticky" aria-hidden="true"></div>
+</div>
+<script>
+// Book To Buyer LIVE sales page: interaction layer. Root: #lfsp-page.
+// Progressive enhancement: the page reads fully with scripts off. The .motion flag is set on the root by a
+// one-line script as the root opens; every hidden-until-revealed state in engine.css is scoped to .motion.
+(function () {
+  var root = document.getElementById("lfsp-page");
+  if (!root) return;
+  var $ = function (s, c) { return (c || root).querySelector(s); };
+  var $$ = function (s, c) { return Array.prototype.slice.call((c || root).querySelectorAll(s)); };
+  var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  try {
+    /* ---------- 1. Header: hidden at the top, slides in after 150px of scroll ---------- */
+    var nav = $(".pnav");
+    var toggle = nav ? $(".nav-toggle", nav) : null;
+    var closeMenu = function () {
+      if (!nav) return;
+      nav.classList.remove("open");
+      if (toggle) toggle.setAttribute("aria-expanded", "false");
+    };
+    if (nav) {
+      var onScroll = function () {
+        var show = (window.pageYOffset || document.documentElement.scrollTop || 0) > 150;
+        nav.classList.toggle("show", show);
+        if (!show) closeMenu();
+      };
+      if (toggle) {
+        toggle.addEventListener("click", function () {
+          var open = nav.classList.toggle("open");
+          toggle.setAttribute("aria-expanded", open ? "true" : "false");
+        });
+      }
+      window.addEventListener("scroll", onScroll, { passive: true });
+      onScroll();
+    }
+
+    /* ---------- 2. Anchor links: smooth scroll. Every #order link lands on the pricing box ---------- */
+    root.addEventListener("click", function (e) {
+      var a = e.target && e.target.closest ? e.target.closest('a[href^="#"]') : null;
+      if (!a) return;
+      var id = a.getAttribute("href").slice(1);
+      var target = id ? document.getElementById(id) : null;
+      if (!target) return;
+      e.preventDefault();
+      closeMenu();
+      var y = target.getBoundingClientRect().top + (window.pageYOffset || 0);
+      window.scrollTo({ top: y, behavior: reduce ? "auto" : "smooth" });
+      if (window.history && history.replaceState) history.replaceState(null, "", "#" + id);
+    });
+
+    /* ---------- 3. Scroll reveals: the same list engine.css hides under .motion ---------- */
+    var REVEAL = ".hero h1,.deck,.seat-note,.eyebrow,.ptitle,.tx,.punch,.pullq,.bigq,.serif-note,.layer-sub,.layer h3,.layer p,.fitcard,.notfit," +
+      ".pill,.case-quote blockquote,.byline,.tq blockquote,.deliv h3,.deliv p,.grad blockquote,.logi p,.bonus p,.plan-price,.plan-label," +
+      ".plan-band,.after-plans,.sig-line,.path p,.where";
+    var items = $$("main " + REVEAL.split(",").join(",main "));
+    if (!("IntersectionObserver" in window) || reduce) {
+      items.forEach(function (el) { el.classList.add("in"); });
+    } else {
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (en) {
+          if (!en.isIntersecting) return;
+          en.target.classList.add("in");
+          io.unobserve(en.target);
+        });
+      }, { rootMargin: "0px 0px -4% 0px", threshold: 0 });
+      items.forEach(function (el) { io.observe(el); });
+    }
+
+    /* ---------- 4. Stat counters: count from data-start to data-end over two seconds ---------- */
+    var counters = $$("[data-end]");
+    var runCounter = function (el) {
+      var start = parseInt(el.getAttribute("data-start"), 10) || 0;
+      var end = parseInt(el.getAttribute("data-end"), 10) || 0;
+      var suffix = el.getAttribute("data-suffix") || "";
+      var t0 = null;
+      var step = function (t) {
+        if (!t0) t0 = t;
+        var p = Math.min((t - t0) / 2000, 1);
+        el.textContent = Math.floor(start + (end - start) * p) + suffix;
+        if (p < 1) requestAnimationFrame(step); else el.textContent = end + suffix;
+      };
+      requestAnimationFrame(step);
+    };
+    if (counters.length && "IntersectionObserver" in window && !reduce) {
+      var cio = new IntersectionObserver(function (entries) {
+        entries.forEach(function (en) {
+          if (!en.isIntersecting) return;
+          runCounter(en.target);
+          cio.unobserve(en.target);
+        });
+      }, { threshold: 0.4 });
+      counters.forEach(function (el) { cio.observe(el); });
+    }
+
+    /* ---------- 5. FAQ: answers open and close with a height and fade animation ---------- */
+    $$(".faq-card details").forEach(function (d) {
+      var summary = $("summary", d), panel = $(".a", d);
+      if (!summary || !panel || !panel.animate || reduce) return;
+      var busy = null;
+      summary.addEventListener("click", function (e) {
+        e.preventDefault();
+        if (busy) { busy.cancel(); busy = null; }
+        var opening = !d.open;
+        if (opening) d.open = true;
+        var h = panel.scrollHeight;
+        busy = panel.animate(
+          opening ? [{ height: "0px", opacity: 0 }, { height: h + "px", opacity: 1 }]
+                  : [{ height: h + "px", opacity: 1 }, { height: "0px", opacity: 0 }],
+          { duration: 260, easing: "ease" });
+        busy.onfinish = function () { if (!opening) d.open = false; busy = null; };
+      });
+    });
+  } catch (err) {
+    // Anything unexpected: show everything instead of leaving content hidden.
+    root.classList.remove("motion");
+    if (window.console && console.error) console.error("lfsp-page script:", err);
+  }
+})();
+
+</script>
